@@ -1,0 +1,116 @@
+body * {
+    margin: 0;
+    padding: 0;
+}
+
+$w10: #b8beb1;
+$w11: pink;
+$w20: #c95252;
+$w21: white;
+
+body {
+    &>div {
+        &>div {
+            // width: 900px;
+            background-color: #ecf5f8;
+
+            padding: 10px 30px;
+
+            &>div {
+                &>p {
+                    border-bottom: 3px solid black;
+                    border-top: 3px solid black;
+                    padding-left: 10px;
+                }
+                &>div {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+
+                    &>div {
+                        width: 160px;
+                        margin: 10px;
+
+                        &>p {
+                            text-align: center;
+                        }
+
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        div {
+                            border-radius: 50%;
+                        }
+                        &>div {
+                            width: 120px;
+                            height: 120px;
+                            padding: 15px;
+
+                            &.originality0 {
+                                background-color: $w10;
+                            }
+                            &.originality1 {
+                                background-color: $w11;
+                            }
+
+                            &>div {
+                                height: 90px;
+                                padding: 15px;
+
+                                &.vocals0 {
+                                    background-color: $w20;
+                                }
+                                &.vocals1 {
+                                    background-color: $w21;
+                                }
+
+                                &>div {
+                                    height: 60px;
+                                    padding: 15px;
+
+                                    &.instrument0 {
+                                        background-color: $w10;
+                                    }
+                                    &.instrument1 {
+                                        background-color: $w11;
+                                    }
+                                    &.instrument2 {
+                                        background-image: linear-gradient(to right, $w10, $w11, $w10, $w11);
+                                    }
+
+                                    &>div {
+                                        height: 30px;
+                                        padding: 15px;
+
+                                        &.author0 {
+                                            background-color: $w20;
+                                        }
+                                        &.author1 {
+                                            background-color: $w21;
+                                        }
+                                        &.author2 {
+                                            background-image: linear-gradient(to bottom, $w21, $w21, $w20, $w21, $w21);
+                                        }
+
+                                        &>div {
+                                            height: 0px;
+                                            padding: 15px;
+                                            // background-color: white;
+
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                        }
+                                    }
+
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

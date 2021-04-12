@@ -1,0 +1,127 @@
+body * {
+  margin: 0;
+  padding: 0;
+}
+
+body > div > div {
+  background-color: #ecf5f8;
+  padding: 10px 30px;
+}
+
+body > div > div > div > p {
+  border-bottom: 3px solid black;
+  border-top: 3px solid black;
+  padding-left: 10px;
+}
+
+body > div > div > div > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body > div > div > div > div > div {
+  width: 160px;
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body > div > div > div > div > div > p {
+  text-align: center;
+}
+
+body > div > div > div > div > div div {
+  border-radius: 50%;
+}
+
+body > div > div > div > div > div > div {
+  width: 120px;
+  height: 120px;
+  padding: 15px;
+}
+
+body > div > div > div > div > div > div.originality0 {
+  background-color: #b8beb1;
+}
+
+body > div > div > div > div > div > div.originality1 {
+  background-color: pink;
+}
+
+body > div > div > div > div > div > div > div {
+  height: 90px;
+  padding: 15px;
+}
+
+body > div > div > div > div > div > div > div.vocals0 {
+  background-color: #c95252;
+}
+
+body > div > div > div > div > div > div > div.vocals1 {
+  background-color: white;
+}
+
+body > div > div > div > div > div > div > div > div {
+  height: 60px;
+  padding: 15px;
+}
+
+body > div > div > div > div > div > div > div > div.instrument0 {
+  background-color: #b8beb1;
+}
+
+body > div > div > div > div > div > div > div > div.instrument1 {
+  background-color: pink;
+}
+
+body > div > div > div > div > div > div > div > div.instrument2 {
+  background-image: -webkit-gradient(linear, left top, right top, from(#b8beb1), color-stop(pink), color-stop(#b8beb1), to(pink));
+  background-image: linear-gradient(to right, #b8beb1, pink, #b8beb1, pink);
+}
+
+body > div > div > div > div > div > div > div > div > div {
+  height: 30px;
+  padding: 15px;
+}
+
+body > div > div > div > div > div > div > div > div > div.author0 {
+  background-color: #c95252;
+}
+
+body > div > div > div > div > div > div > div > div > div.author1 {
+  background-color: white;
+}
+
+body > div > div > div > div > div > div > div > div > div.author2 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(white), color-stop(#c95252), color-stop(white), to(white));
+  background-image: linear-gradient(to bottom, white, white, #c95252, white, white);
+}
+
+body > div > div > div > div > div > div > div > div > div > div {
+  height: 0px;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=main.css.map */
