@@ -3,29 +3,142 @@ body * {
   padding: 0;
 }
 
-body > div > div {
+body div#generalSettingsContainer, body div#playbackSettingsContainer {
+  position: fixed;
+  left: 10px;
+}
+
+body div#generalSettingsContainer div.iconAndDesc, body div#playbackSettingsContainer div.iconAndDesc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border: 5px solid black;
+  border-radius: 10px;
+}
+
+body div#generalSettingsContainer div.iconAndDesc i, body div#playbackSettingsContainer div.iconAndDesc i {
+  margin-right: 5px;
+  font-size: 30px;
+}
+
+body div#generalSettingsContainer div.iconAndDesc i.fa-file-alt, body div#playbackSettingsContainer div.iconAndDesc i.fa-file-alt {
+  margin-left: 6px;
+}
+
+body div#generalSettingsContainer div.iconAndDesc p, body div#playbackSettingsContainer div.iconAndDesc p {
+  font-size: 20px;
+}
+
+body div#generalSettingsContainer div.iconAndDesc.inline:hover, body div#playbackSettingsContainer div.iconAndDesc.inline:hover {
+  width: 30vw;
+}
+
+body div#generalSettingsContainer div.iconAndDesc:hover, body div#playbackSettingsContainer div.iconAndDesc:hover {
+  width: 120px;
+  background-color: #818181;
+  color: white;
+  border: 5px solid #2e2e2e;
+}
+
+body div#generalSettingsContainer div.iconAndDesc:hover div.largeInfoDiv, body div#playbackSettingsContainer div.iconAndDesc:hover div.largeInfoDiv {
+  position: fixed;
+  left: 145px;
+  top: 15px;
+  width: 50vw;
+  height: 90vh;
+  background-color: #818181;
+  color: white;
+  border-radius: 10px;
+  border: 5px solid #2e2e2e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+  overflow-y: scroll;
+  text-align: center;
+}
+
+body div#generalSettingsContainer div.iconAndDesc:hover div.largeInfoDiv audio#mainAudio, body div#playbackSettingsContainer div.iconAndDesc:hover div.largeInfoDiv audio#mainAudio {
+  width: 100%;
+}
+
+body div#generalSettingsContainer div.iconAndDesc.inline > p, body div#playbackSettingsContainer div.iconAndDesc.inline > p {
+  margin-right: 20px;
+}
+
+body div#generalSettingsContainer div.iconAndDesc.inline > div > button, body div#playbackSettingsContainer div.iconAndDesc.inline > div > button {
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+body div#generalSettingsContainer div.iconAndDesc.inline > div > i, body div#playbackSettingsContainer div.iconAndDesc.inline > div > i {
+  border: 5px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  margin-right: 5px;
+  font-size: 30px;
+}
+
+body > div#generalSettingsContainer {
+  top: 200px;
+}
+
+body > div#playbackSettingsContainer {
+  bottom: 30px;
+}
+
+body > div#playbackSettingsContainer audio#mainAudio {
+  display: none;
+}
+
+body > header img {
+  width: 100px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body > div#mainSongContainer {
+  width: 90%;
+  float: right;
+}
+
+body > div#mainSongContainer > div {
   background-color: #ecf5f8;
   padding: 10px 30px;
 }
 
-body > div > div > div > p {
+body > div#mainSongContainer > div > div > p {
   border-bottom: 3px solid black;
   border-top: 3px solid black;
   padding-left: 10px;
 }
 
-body > div > div > div > div {
+body > div#mainSongContainer > div > div > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
-body > div > div > div > div > div {
+body > div#mainSongContainer > div > div > div > div {
   width: 160px;
   margin: 10px;
   display: -webkit-box;
@@ -40,78 +153,93 @@ body > div > div > div > div > div {
           align-items: center;
 }
 
-body > div > div > div > div > div > p {
+body > div#mainSongContainer > div > div > div > div > p {
   text-align: center;
 }
 
-body > div > div > div > div > div div {
+body > div#mainSongContainer > div > div > div > div div {
   border-radius: 50%;
 }
 
-body > div > div > div > div > div > div {
+body > div#mainSongContainer > div > div > div > div > div {
   width: 120px;
   height: 120px;
   padding: 15px;
 }
 
-body > div > div > div > div > div > div.originality0 {
+body > div#mainSongContainer > div > div > div > div > div.originality0 {
   background-color: #b8beb1;
 }
 
-body > div > div > div > div > div > div.originality1 {
+body > div#mainSongContainer > div > div > div > div > div.originality1 {
   background-color: pink;
 }
 
-body > div > div > div > div > div > div > div {
+body > div#mainSongContainer > div > div > div > div > div:hover {
+  -webkit-transform: rotate(360deg) scale(1.2);
+          transform: rotate(360deg) scale(1.2);
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+body > div#mainSongContainer > div > div > div > div > div:hover i {
+  font-size: 40px;
+  -webkit-transition: font-size .4s;
+  transition: font-size .4s;
+}
+
+body > div#mainSongContainer > div > div > div > div > div > div {
   height: 90px;
   padding: 15px;
 }
 
-body > div > div > div > div > div > div > div.vocals0 {
+body > div#mainSongContainer > div > div > div > div > div > div.vocals0 {
   background-color: #c95252;
 }
 
-body > div > div > div > div > div > div > div.vocals1 {
+body > div#mainSongContainer > div > div > div > div > div > div.vocals1 {
   background-color: white;
 }
 
-body > div > div > div > div > div > div > div > div {
+body > div#mainSongContainer > div > div > div > div > div > div > div {
   height: 60px;
   padding: 15px;
 }
 
-body > div > div > div > div > div > div > div > div.instrument0 {
+body > div#mainSongContainer > div > div > div > div > div > div > div.instrument0 {
   background-color: #b8beb1;
 }
 
-body > div > div > div > div > div > div > div > div.instrument1 {
+body > div#mainSongContainer > div > div > div > div > div > div > div.instrument1 {
   background-color: pink;
 }
 
-body > div > div > div > div > div > div > div > div.instrument2 {
+body > div#mainSongContainer > div > div > div > div > div > div > div.instrument2 {
   background-image: -webkit-gradient(linear, left top, right top, from(#b8beb1), color-stop(pink), color-stop(#b8beb1), to(pink));
   background-image: linear-gradient(to right, #b8beb1, pink, #b8beb1, pink);
 }
 
-body > div > div > div > div > div > div > div > div > div {
+body > div#mainSongContainer > div > div > div > div > div > div > div > div {
   height: 30px;
   padding: 15px;
 }
 
-body > div > div > div > div > div > div > div > div > div.author0 {
+body > div#mainSongContainer > div > div > div > div > div > div > div > div.author0 {
   background-color: #c95252;
 }
 
-body > div > div > div > div > div > div > div > div > div.author1 {
+body > div#mainSongContainer > div > div > div > div > div > div > div > div.author1 {
   background-color: white;
 }
 
-body > div > div > div > div > div > div > div > div > div.author2 {
+body > div#mainSongContainer > div > div > div > div > div > div > div > div.author2 {
   background-image: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(white), color-stop(#c95252), color-stop(white), to(white));
   background-image: linear-gradient(to bottom, white, white, #c95252, white, white);
 }
 
-body > div > div > div > div > div > div > div > div > div > div {
+body > div#mainSongContainer > div > div > div > div > div > div > div > div > div {
   height: 0px;
   padding: 15px;
   display: -webkit-box;
@@ -123,5 +251,34 @@ body > div > div > div > div > div > div > div > div > div > div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+body div.modalSong {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0008;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body div.modalSong div.modalMain {
+  margin-top: 100px;
+  background-color: #aaa;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+body div.modalSong div.modalMain img {
+  border-radius: 20px;
+  border: 3px solid #ddd;
 }
 /*# sourceMappingURL=main.css.map */

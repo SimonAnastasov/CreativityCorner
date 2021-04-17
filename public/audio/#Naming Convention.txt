@@ -1,0 +1,19 @@
+1. Author:
+s = Simon
+e = Evs
+b = Both
+
+2. Originality:
+o = Original
+c = Cover
+m = Mixed (For more than 1 songs in 1 file)
+
+3. Type:
+i = Instrumental
+s = + Singing
+
+4. Instrument:
+p = Piano
+g = Guitar
+
+5. Name.

@@ -9,9 +9,129 @@ $w20: #c95252;
 $w21: white;
 
 body {
-    &>div {
+    div#generalSettingsContainer, div#playbackSettingsContainer {
+        position: fixed;
+        left: 10px;
+
+        div.iconAndDesc {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+
+            overflow: hidden;
+            white-space: nowrap;
+            
+            width: 30px;
+            height: 30px;
+            padding: 5px;
+
+            border: 5px solid black;
+            border-radius: 10px;
+
+            i {
+                margin-right: 5px;
+                font-size: 30px;
+
+                &.fa-file-alt {
+                    margin-left: 6px;
+                }
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            &.inline:hover {
+                width: 30vw;
+            }
+
+            &:hover {
+                width: 120px;
+                background-color: rgb(129, 129, 129);
+                color: white;
+
+                border: 5px solid rgb(46, 46, 46);
+
+                div.largeInfoDiv {
+                    position: fixed;
+                    left: 145px;
+                    top: 15px;
+                    width: 50vw;
+                    height: 90vh;
+
+                    background-color: rgb(129, 129, 129);
+                    color: white;
+
+                    border-radius: 10px;
+                    border: 5px solid rgb(46, 46, 46);
+
+                    display: flex;
+                    flex-direction: column;
+
+                    audio#mainAudio {
+                        width: 100%;
+                    }
+
+                    padding: 20px;
+                    overflow-y: scroll;
+                    text-align: center;
+                }
+            }
+
+            &.inline {
+                &>p {
+                    margin-right: 20px;
+                }
+
+                &>div {
+                    &>button {
+                        // width: 70px;
+                        border-radius: 10px;
+                        padding: 5px 10px;
+                    }
+
+                    &>i {
+                        border: 5px solid black;
+                        border-radius: 10px;
+                        padding: 5px;
+
+                        margin-right: 5px;
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    &>div#generalSettingsContainer {
+        top: 200px;
+    }
+
+    &>div#playbackSettingsContainer {
+        bottom: 30px;
+
+        audio#mainAudio {
+            display: none;
+            // position: fixed;
+            // left: -115px;
+            // bottom: 160px;
+            // transform: rotateZ(270deg);
+        }
+    }
+
+    &>header {
+        img {
+            width: 100px;
+            height: 50px;
+            object-fit: cover;
+        }
+    }
+
+    &>div#mainSongContainer {
+        width: 90%;
+        float: right;
+        
         &>div {
-            // width: 900px;
             background-color: #ecf5f8;
 
             padding: 10px 30px;
@@ -25,7 +145,7 @@ body {
                 &>div {
                     display: flex;
                     flex-wrap: wrap;
-                    justify-content: flex-start;
+                    justify-content: flex-end;
 
                     &>div {
                         width: 160px;
@@ -52,6 +172,16 @@ body {
                             }
                             &.originality1 {
                                 background-color: $w11;
+                            }
+
+                            &:hover {
+                                transform: rotate(360deg) scale(1.2);
+                                transition: transform .5s;
+
+                                i {
+                                    font-size: 40px;
+                                    transition: font-size .4s;
+                                }
                             }
 
                             &>div {
@@ -96,7 +226,6 @@ body {
                                         &>div {
                                             height: 0px;
                                             padding: 15px;
-                                            // background-color: white;
 
                                             display: flex;
                                             justify-content: center;
@@ -110,6 +239,32 @@ body {
                         }
                     }
                 }
+            }
+        }
+    }
+
+    div.modalSong {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #0008;
+
+        display: none;
+        justify-content: center;
+
+        div.modalMain {
+            margin-top: 100px;
+            background-color: #aaa;
+            height: fit-content;
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+
+            img {
+                border-radius: 20px;
+                border: 3px solid #ddd;
             }
         }
     }
