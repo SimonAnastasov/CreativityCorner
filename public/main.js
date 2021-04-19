@@ -358,6 +358,7 @@ function loadModalSong(song) {
                 { src: imgSrc,   sizes: '96x96',   type: 'image/jpg' }
             ]
         });
+        updatePositionState();
     }
 
     navigator.mediaSession.setActionHandler('previoustrack', function() {
@@ -371,11 +372,23 @@ function loadModalSong(song) {
     let skipTime = 10;
     navigator.mediaSession.setActionHandler('seekbackward', function() {
         AUDIO.currentTime = Math.max(AUDIO.currentTime - skipTime, 0);
+        updatePositionState();
     });
 
     navigator.mediaSession.setActionHandler('seekforward', function() {
         AUDIO.currentTime = Math.min(AUDIO.currentTime + skipTime, AUDIO.duration);
+        updatePositionState();
     });
+}
+
+function updatePositionState() {
+    if ('setPositionState' in navigator.mediaSession) {
+        navigator.mediaSession.setPositionState({
+            duration: AUDIO.duration,
+            playbackRate: AUDIO.playbackRate,
+            position: AUDIO.currentTime
+        });
+    }
 }
 
 const modalImages = [
