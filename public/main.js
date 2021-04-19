@@ -293,6 +293,8 @@ $('#'+MAIN_SONG_CONTAINER).click(e => {
     }
 });
 
+
+
 let LAST_HIGHLIGHTED_ID = 'none';
 function highlightSong(idcode, id) {
     const prevEl = $('#'+LAST_HIGHLIGHTED_ID);
@@ -337,11 +339,43 @@ function loadModalSong(song) {
     else {
         modalSong.css('display', 'flex');
     }
-    modalSongTitle.html(song.name.substr(0, song.nameLen));
-    modalSongAuthor.html(getAuthor(song));
+    const title = song.name.substr(0, song.nameLen);
+    const author = getAuthor(song);
+    modalSongTitle.html(title);
+    modalSongAuthor.html(author);
 
     const imgSrc = getModalImgSrc(song);
     modalSongImg.attr('src', imgSrc);
+
+    // notifications display
+    if ('mediaSession' in navigator) {
+        navigator.mediaSession.metadata = new MediaMetadata({
+            title: title,
+            artist: author,
+            album: 'none',
+            artwork: [
+                // { src: './images/logo.png',   sizes: '96x96',   type: 'image/png' }
+                { src: imgSrc,   sizes: '96x96',   type: 'image/jpg' }
+            ]
+        });
+    }
+
+    navigator.mediaSession.setActionHandler('previoustrack', function() {
+        playPreviousSong();
+    });
+
+    navigator.mediaSession.setActionHandler('nexttrack', function() {
+        playNextSong();
+    });
+
+    let skipTime = 10;
+    navigator.mediaSession.setActionHandler('seekbackward', function() {
+        AUDIO.currentTime = Math.max(AUDIO.currentTime - skipTime, 0);
+    });
+
+    navigator.mediaSession.setActionHandler('seekforward', function() {
+        AUDIO.currentTime = Math.min(AUDIO.currentTime + skipTime, AUDIO.duration);
+    });
 }
 
 const modalImages = [
@@ -554,12 +588,26 @@ $('#btnPlayback').click(() => {
     loadModalSong(song);
 })
 
+let canPrev = true;
 $('#btnPrevSong').click(() => {
-    playPreviousSong();
+    if (canPrev) {
+        playPreviousSong();
+        canPrev = false;
+        setTimeout(() => {
+            canPrev = true;
+        }, 200);
+    }
 })
 
+let canNext = true;
 $('#btnNextSong').click(() => {
-    playNextSong();
+    if (canNext) {
+        playNextSong();
+        canNext = false;
+        setTimeout(() => {
+            canNext = true;
+        }, 200);
+    }
 })
 
 let shuffled = false;
@@ -600,10 +648,10 @@ $('#btnPlay').click(() => {
 })
 
 // * Audio Visualiser
-let canvWidth = 500;
-if (media.matches) canvWidth = 300;
-console.log(canvWidth);
 $('#canvas').click(e => {
+    let canvWidth = 500;
+    if (media.matches) canvWidth = 300;
+
     const el = $('#canvas');
     const xPos = e.pageX - el.offset().left;
 
