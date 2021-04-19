@@ -243,6 +243,7 @@ const AUDIOSRC = $('#mainAudio source');
 
 let CURRENT_SONG_IDX = 0;
 
+let TIMEOUT_VISUALIZER = setTimeout(() => {}, 0);
 function playSong(songIdx) {
     PLAYED_SONG_BOOLEAN = true;
     const song = allSongs[songIdx];
@@ -273,7 +274,8 @@ function playSong(songIdx) {
         
         highlightSong(idcode, id);
         
-        setTimeout(() => {
+        clearTimeout(TIMEOUT_VISUALIZER);
+        TIMEOUT_VISUALIZER = setTimeout(() => {
             visualizeAudio(song.src);
         }, 500);
     }
@@ -292,8 +294,6 @@ $('#'+MAIN_SONG_CONTAINER).click(e => {
         }
     }
 });
-
-
 
 let LAST_HIGHLIGHTED_ID = 'none';
 function highlightSong(idcode, id) {
@@ -326,6 +326,16 @@ function getAuthor(song) {
     return 'by ' + rStr;
 }
 
+function updatePositionState() {
+    setTimeout(() => {
+        navigator.mediaSession.setPositionState({
+            duration: AUDIO.duration,
+            playbackRate: AUDIO.playbackRate,
+            position: AUDIO.currentTime
+        });
+    }, 100);
+}
+
 const modalSong = $('#modalSong');
 const modalSongTitle = $('#modalSongTitle');
 const modalSongAuthor = $('#modalSongAuthor');
@@ -352,7 +362,7 @@ function loadModalSong(song) {
         navigator.mediaSession.metadata = new MediaMetadata({
             title: title,
             artist: author,
-            album: 'none',
+            album: author,
             artwork: [
                 // { src: './images/logo.png',   sizes: '96x96',   type: 'image/png' }
                 { src: imgSrc,   sizes: '96x96',   type: 'image/jpg' }
@@ -379,16 +389,6 @@ function loadModalSong(song) {
         AUDIO.currentTime = Math.min(AUDIO.currentTime + skipTime, AUDIO.duration);
         updatePositionState();
     });
-}
-
-function updatePositionState() {
-    if ('setPositionState' in navigator.mediaSession) {
-        navigator.mediaSession.setPositionState({
-            duration: AUDIO.duration,
-            playbackRate: AUDIO.playbackRate,
-            position: AUDIO.currentTime
-        });
-    }
 }
 
 const modalImages = [
