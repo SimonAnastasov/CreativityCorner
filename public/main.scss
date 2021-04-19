@@ -243,6 +243,7 @@ body {
         justify-content: center;
         align-items: center;
 
+
         div.modalMain {
             background-color: #aaa;
             height: fit-content;
@@ -353,7 +354,7 @@ body {
                         height: 60vh;
 
                         p {
-                            font-size: 1.1rem;
+                            font-size: 1rem;
                         }
                     }
                 }
@@ -402,27 +403,27 @@ body {
 
 
                             &>div {
-                                width: 60px;
-                                height: 60px;
-                                padding: 5px;
+                                width: 80px;
+                                height: 80px;
+                                padding: 10px;
 
                                 // hover here
 
                                 &>div {
-                                    height: 50px;
-                                    padding: 5px;
+                                    height: 60px;
+                                    padding: 10px;
 
                                     &>div {
                                         height: 40px;
-                                        padding: 5px;
+                                        padding: 10px;
 
                                         &>div {
-                                            height: 30px;
-                                            padding: 5px;
+                                            height: 20px;
+                                            padding: 10px;
 
                                             &>div {
-                                                height: 20px;
-                                                padding: 5px;
+                                                height: 0px;
+                                                padding: 10px;
                                             }
                                         }
                                     }
@@ -439,12 +440,13 @@ body {
             height: 80px;
         }
 
-        div.modalSong {
+        div.modalSong {            
             div.modalMain {
-                margin: 0 10px;
+                margin: 0 20px;
 
                 img {
                     height: 200px;
+                    max-width: calc(100vw - 100px);
                 }
 
                 i {

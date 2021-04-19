@@ -384,7 +384,7 @@ body div.modalSong div.modalMain h3 {
     height: 60vh;
   }
   body div#generalSettingsContainer div.iconAndDesc:hover div.largeInfoDiv p {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   body div#generalSettingsContainer div.iconAndDesc.inline > p {
     margin-right: 0px;
@@ -417,35 +417,36 @@ body div.modalSong div.modalMain h3 {
     margin: 10px 15px;
   }
   body > div#mainSongContainer > div > div > div > div > div {
-    width: 60px;
-    height: 60px;
-    padding: 5px;
+    width: 80px;
+    height: 80px;
+    padding: 10px;
   }
   body > div#mainSongContainer > div > div > div > div > div > div {
-    height: 50px;
-    padding: 5px;
+    height: 60px;
+    padding: 10px;
   }
   body > div#mainSongContainer > div > div > div > div > div > div > div {
     height: 40px;
-    padding: 5px;
+    padding: 10px;
   }
   body > div#mainSongContainer > div > div > div > div > div > div > div > div {
-    height: 30px;
-    padding: 5px;
+    height: 20px;
+    padding: 10px;
   }
   body > div#mainSongContainer > div > div > div > div > div > div > div > div > div {
-    height: 20px;
-    padding: 5px;
+    height: 0px;
+    padding: 10px;
   }
   body canvas {
     width: 300px;
     height: 80px;
   }
   body div.modalSong div.modalMain {
-    margin: 0 10px;
+    margin: 0 20px;
   }
   body div.modalSong div.modalMain img {
     height: 200px;
+    max-width: calc(100vw - 100px);
   }
   body div.modalSong div.modalMain i {
     font-size: 30px;

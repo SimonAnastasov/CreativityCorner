@@ -327,7 +327,14 @@ const modalSongTitle = $('#modalSongTitle');
 const modalSongAuthor = $('#modalSongAuthor');
 const modalSongImg = $('#modalSongImg');
 function loadModalSong(song) {
-    modalSong.css('display', 'flex');
+    if (media.matches) {
+        setTimeout(() => {
+            modalSong.css('display', 'flex');
+        }, 400);
+    }
+    else {
+        modalSong.css('display', 'flex');
+    }
     modalSongTitle.html(song.name.substr(0, song.nameLen));
     modalSongAuthor.html(getAuthor(song));
 
