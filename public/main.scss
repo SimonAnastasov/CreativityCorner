@@ -9,9 +9,11 @@ $w20: #c95252;
 $w21: white;
 
 body {
-    div#generalSettingsContainer, div#playbackSettingsContainer {
+    div#generalSettingsContainer {
         position: fixed;
+        top: 200px;
         left: 10px;
+        z-index: 20;
 
         div.iconAndDesc {
             display: flex;
@@ -42,7 +44,7 @@ body {
             }
 
             &.inline:hover {
-                width: 30vw;
+                width: 460px;
             }
 
             &:hover {
@@ -68,10 +70,6 @@ body {
                     display: flex;
                     flex-direction: column;
 
-                    audio#mainAudio {
-                        width: 100%;
-                    }
-
                     padding: 20px;
                     overflow-y: scroll;
                     text-align: center;
@@ -85,44 +83,28 @@ body {
 
                 &>div {
                     &>button {
-                        // width: 70px;
                         border-radius: 10px;
                         padding: 5px 10px;
-                    }
-
-                    &>i {
-                        border: 5px solid black;
-                        border-radius: 10px;
-                        padding: 5px;
-
-                        margin-right: 5px;
-                        font-size: 30px;
                     }
                 }
             }
         }
     }
 
-    &>div#generalSettingsContainer {
-        top: 200px;
-    }
-
-    &>div#playbackSettingsContainer {
-        bottom: 30px;
-
-        audio#mainAudio {
-            display: none;
-            // position: fixed;
-            // left: -115px;
-            // bottom: 160px;
-            // transform: rotateZ(270deg);
-        }
-    }
-
     &>header {
-        img {
-            width: 100px;
-            height: 50px;
+        img#imgLogo {
+            position: fixed;
+            top: 5px;
+            left: -5px;
+            width: 200px;
+            height: 200px;
+        }
+        display: flex;
+        justify-content: center;
+        margin-bottom: -20px;
+        img#imgTitle {
+            width: 400px;
+            height: 100px;
             object-fit: cover;
         }
     }
@@ -243,6 +225,12 @@ body {
         }
     }
 
+    canvas {
+        width: 500px;
+        height: 100px;
+        border-radius: 5px;
+    }
+
     div.modalSong {
         position: fixed;
         top: 0;
@@ -253,9 +241,9 @@ body {
 
         display: none;
         justify-content: center;
+        align-items: center;
 
         div.modalMain {
-            margin-top: 100px;
             background-color: #aaa;
             height: fit-content;
             border-radius: 20px;
@@ -263,8 +251,209 @@ body {
             text-align: center;
 
             img {
+                height: 300px;
                 border-radius: 20px;
                 border: 3px solid #ddd;
+                padding: 2px;
+            }
+
+            audio {
+                display: none;
+            }
+
+            i {
+                font-size: 40px;
+                padding: 5px;
+                border: 5px solid black;
+                margin: 0 5px;
+                border-radius: 15px;
+
+                &.active {
+                    background-color: #888;
+                }
+            }
+
+            h3 {
+                font-weight: normal;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    body {
+        div#generalSettingsContainer {
+            top: 10px;
+            left: 0;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+
+            div.iconAndDesc {
+                margin: 0 20px;
+                display: flex;
+                align-items: center;
+                margin-bottom: 30px;
+
+                overflow: hidden;
+                white-space: nowrap;
+
+                width: 20px;
+                height: 20px;
+                padding: 5px;
+
+                border: 5px solid black;
+                border-radius: 10px;
+
+                // new code
+                display: flex;
+                flex-direction: column;
+
+                i {
+                    margin-right: 0px;
+                    margin-bottom: 5px;
+                    font-size: 20px;
+
+                    &.fa-file-alt {
+                        margin-left: 4px;
+                    }
+                }
+
+                p {
+                    font-size: 20px;
+                }
+
+                &.inline:hover {
+                    width: 100px;
+                    height: 220px;
+
+                    &>div {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+
+                &.inline#btnPlayback:hover {
+                    width: 20px;
+                    height: 20px;
+                }
+
+                &:hover {
+                    width: 20px;
+                    height: 20px;
+                    background-color: rgb(129, 129, 129);
+                    color: white;
+
+                    border: 5px solid rgb(46, 46, 46);
+
+                    div.largeInfoDiv {
+                        top: 55px;
+                        left: calc(15vw - 25px);
+                        width: 70vw;
+                        height: 60vh;
+
+                        p {
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
+
+                &.inline {
+                    &>p {
+                        margin-right: 0px;
+                    }
+
+                    &>div {
+                        &>button {
+                            border-radius: 10px;
+                            padding: 5px 10px;
+                            margin: 2px 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        &>header {
+            img#imgLogo {
+                display: none;
+            }
+
+            img#imgTitle {
+                margin-top: 50px;
+            }
+        }
+
+        &>div#mainSongContainer {
+            width: 100%;
+            clear: both;
+
+            &>div {
+                padding: 10px 10px;
+
+                &>div {
+
+                    &>div {
+                        justify-content: center;
+
+                        &>div {
+                            width: 100px;
+                            margin: 10px 15px;
+
+
+                            &>div {
+                                width: 60px;
+                                height: 60px;
+                                padding: 5px;
+
+                                // hover here
+
+                                &>div {
+                                    height: 50px;
+                                    padding: 5px;
+
+                                    &>div {
+                                        height: 40px;
+                                        padding: 5px;
+
+                                        &>div {
+                                            height: 30px;
+                                            padding: 5px;
+
+                                            &>div {
+                                                height: 20px;
+                                                padding: 5px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        canvas {
+            width: 300px;
+            height: 80px;
+        }
+
+        div.modalSong {
+            div.modalMain {
+                margin: 0 10px;
+
+                img {
+                    height: 200px;
+                }
+
+                i {
+                    font-size: 30px;
+                }
+
+                h1 {
+                    font-size: 1.8rem;
+                }
             }
         }
     }

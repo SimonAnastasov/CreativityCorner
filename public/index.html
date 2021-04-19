@@ -14,7 +14,21 @@
             <i class="fas fa-info-circle"></i>
             <p>Info</p>
             <div class="largeInfoDiv">
-                <p>Hello</p>
+                <p>First circle:</p>
+                <p>gray - original</p>
+                <p>pink - cover</p>
+                <br>
+                <p>Second circle:</p>
+                <p>red - instrumental</p>
+                <p>white - vocals</p>
+                <br>
+                <p>Third circle:</p>
+                <p>gray - guitar</p>
+                <p>pink - piano</p>
+                <br>
+                <p>Fourth circle:</p>
+                <p>red - simon</p>
+                <p>white - evgenija</p>
             </div>
         </div>
         <div class="iconAndDesc inline">
@@ -35,39 +49,15 @@
                 <p id="lyrics">There are currently no lyrics for this song.</p>
             </div>
         </div>
-        <div class="iconAndDesc inline">
+        <div id="btnPlayback" class="iconAndDesc inline">
             <i class="fas fa-cog"></i>
-            <p>Playback</p>
-            <div>
-                <i class="fas fa-backward"></i>
-                <i class="fas fa-random"></i>
-                <i class="fas fa-redo"></i>
-                <i class="fas fa-forward"></i>
-            </div>
+            <p>Playback <span style="font-size: 1rem;">(Click to open wizard)</span></p>
         </div>
     </div>
 
-    <!-- <div id="playbackSettingsContainer">
-        <div class="iconAndDesc" id="btnPrevSong">
-            <i class="fas fa-backward"></i>
-            <p>Previous</p>
-        </div>
-        <div class="iconAndDesc">
-            <i class="fas fa-random"></i>
-            <p>Shuffle</p>
-        </div>
-        <div class="iconAndDesc">
-            <i class="fas fa-redo"></i>
-            <p>Repeat</p>
-        </div>
-        <div class="iconAndDesc" id="btnNextSong">
-            <i class="fas fa-forward"></i>
-            <p>Next</p>
-        </div>
-    </div> -->
-
     <header>
-        <img src="./images/logo.png" alt="Logo">
+        <img id="imgLogo" src="./images/logo.png" alt="Logo">
+        <img id="imgTitle" src="./images/title.png" alt="title">
     </header>
 
     <div id="mainSongContainer"></div>
@@ -76,11 +66,19 @@
         <div class="modalMain">
             <h1 id="modalSongTitle">Title</h1>
             <h3 id="modalSongAuthor">Author</h3>
-            <img src="./images/img.jpg" alt="image of author" height="300px">
+            <img id="modalSongImg" src="./images/logo.png" alt="image of author">
             <div>
                 <audio id="mainAudio" controls>
                     <source src="">
                 </audio>
+            </div>
+            <canvas id="canvas"></canvas>
+            <div>
+                <i id="btnRepeat" class="fas fa-redo"></i>
+                <i id="btnPrevSong" class="fas fa-backward"></i>
+                <i id="btnPlay" class="fas fa-play"></i>
+                <i id="btnNextSong" class="fas fa-forward"></i>
+                <i id="btnShuffle" class="fas fa-random"></i>
             </div>
         </div>
     </div>
