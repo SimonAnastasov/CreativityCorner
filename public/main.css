@@ -73,6 +73,10 @@ body div#generalSettingsContainer div.iconAndDesc:hover div.largeInfoDiv {
   text-align: center;
 }
 
+body div#generalSettingsContainer div.iconAndDesc:hover div.largeInfoDiv p {
+  white-space: normal;
+}
+
 body div#generalSettingsContainer div.iconAndDesc.inline > p {
   margin-right: 20px;
 }
@@ -408,13 +412,12 @@ body div.modalSong div.modalMain h3 {
     padding: 10px 10px;
   }
   body > div#mainSongContainer > div > div > div {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
   body > div#mainSongContainer > div > div > div > div {
     width: 100px;
-    margin: 10px 15px;
   }
   body > div#mainSongContainer > div > div > div > div > div {
     width: 80px;

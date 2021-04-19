@@ -624,6 +624,10 @@ function visualizeAudio(url) {
         .then(audioBuffer => draw(normalizeData(filterData(audioBuffer))));
 }
 
+socket.on('visualizeAudio', normalizedData => {
+    console.log(normalizedData);
+});
+
 function filterData(audioBuffer) {
     const rawData = audioBuffer.getChannelData(0);
     const samples = 100;
