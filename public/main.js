@@ -273,7 +273,9 @@ function playSong(songIdx) {
         
         highlightSong(idcode, id);
         
-        visualizeAudio(song.src);
+        setTimeout(() => {
+            visualizeAudio(song.src);
+        }, 1000);
     }
 }
 
@@ -598,7 +600,9 @@ $('#btnPlay').click(() => {
 })
 
 // * Audio Visualiser
-const canvWidth = document.getElementById('canvas').width;
+let canvWidth = 500;
+if (media.matches) canvWidth = 300;
+console.log(canvWidth);
 $('#canvas').click(e => {
     const el = $('#canvas');
     const xPos = e.pageX - el.offset().left;
