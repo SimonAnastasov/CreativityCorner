@@ -22,11 +22,36 @@ function getRnd(min, max) {
     return Math.random() * (max - min) + min
 }
 
-function genSongInfo(id = "songX", name, infocode, mins, secs, src) {
+const AUDIO = $('#mainAudio')[0];
+const AUDIOSRC = $('#mainAudio source');
+
+function encodeInfocode(code) {
+    let str = '';
+    if (code[1] == 'o') str += '0';
+    else if (code[1] == 'c') str += '1';
+    if (code[2] == 'i') str += '0';
+    else if (code[2] == 's') str += '1';
+    if (code[3] == 'g') str += '0';
+    else if (code[3] == 'p') str += '1';
+    else if (code[3] == 'b') str += '2';
+    if (code[0] == 's') str += '0';
+    else if (code[0] == 'e') str += '1';
+    else if (code[0] == 'b') str += '2';
+    return str;
+}
+
+function genSongInfo(id = "songX", name, src) {
     let txt = "";
     const nameLen = name.length;
-    txt += '{id: "' + id + '", name: "' + name + id + '", infocode: "' + infocode + '", mins: ' + mins + ', secs: ' + secs + ', src: "' + src + '", nameLen: ' + nameLen + ', lyrics: NO_LYRICS},';
-    console.log(txt);
+    const infocode = encodeInfocode(src.substr(8, 4));
+    AUDIOSRC.attr('src', src);
+    AUDIO.load();
+    setTimeout(() => {
+        const mins = Math.floor(AUDIO.duration / 60);
+        const secs = Math.floor(AUDIO.duration % 60);
+        txt += '{id: "' + id + '", name: "' + name + id + '", infocode: "' + infocode + '", mins: ' + mins + ', secs: ' + secs + ', src: "' + src + '", nameLen: ' + nameLen + ', lyrics: NO_LYRICS},';
+        console.log(txt);
+    }, 1000);
 
     // * infocode:
     //      ic[0] = (0 for original, 1 for cover)
@@ -34,7 +59,9 @@ function genSongInfo(id = "songX", name, infocode, mins, secs, src) {
     //      ic[2] = (0 for guitar, 1 for piano, 2 for both)
     //      ic[3] = (o for simon, 1 for evgenija, 2 for both)
 }
-// e.g. genSongInfo('song21', 'Jar Of Hearts [Christina Perri]', '1122', 3, 19, './audio/bcsb-JarOfHeartsNew.m4a');
+// ? e.g.
+// genSongInfo('song21', 'Jar Of Hearts [Christina Perri]', './audio/bcsb-JarOfHeartsNew.m4a');
+// ? e.g.
 
 const aboutThisGirlLyrics = "***<br><br>It was a perfect sunny day to spend outside,<br>The city park being the lucky place,<br>To be where it all began.<br><br>It was a perfect sunny day for laughs and laughs,<br>Bubi and Robi being the lucky ones,<br>To be how it all began.<br><br>It was already so perfect,<br>Looking, looking back even perfecter,<br>And now it's become the perfectest...<br>Let me tell you about this girl...<br><br>(x2)<br>With a smile that [warms] / [melts] the heart,<br>And with a voice that [takes your breath away] / [makes your day],<br>With a touch that [makes your blood rush] / [soothes your just right],<br>And with a heart so pure and gentle,<br>I could never ever have met a lovelier girl...<br><br>***<br><br>Let's celebrate all that we have...<br>All the times we turned our shy faces away;<br>All the times our hearts skiipped a beat,<br>When our roads would accidentally cross;<br>All the times we were brave enough to hug;<br>All the times we shared our music tastes;<br>All the times it was just me and you,<br>When time would stop and you'd be all that matters.<br><br>It was already so perfect,<br>Looking, looking back even perfecter,<br>And now it's become the perfectest...<br>Let me tell you about this girl...<br><br>(x2)<br>With a smile that [warms] / [melts] the heart,<br>And with a voice that [takes your breath away] / [makes your day],<br>With a touch that [makes your blood rush] / [soothes your just right],<br>And with a heart so pure and gentle,<br>I could never ever have met a lovelier girl...";
 const goForwardLyrics = "It has always bothered you hasn't it,<br>You fall and you think it's over,<br>You fall and you feel you cannot get up.<br><br>Perhaps what you've failed to realize,<br>Is that when you fall, you choose the direction,<br>You can choose to win, choose to fall forward.<br><br>***<br><br>It has always bothered you hasn't it,<br>You feel a minor fail like a fatal blow,<br>You burry yourself underneath the failure spotlight.<br><br>Perhaps what you've failed to realize,<br>Is that you are in the spotlight,<br>And you can own the situation, by choosing to go forward...<br><br>***<br><br>Recognize your mistake, as a call to grow<br>Don't let it go to waste, make it count,<br>Stand up straight with your shoulders back, and<br>Don't have a single care about anyone else's opinion.<br><br>Find a way to learn from it, without a word to prove your worth,<br>Find a way to not repeat it, and forget it ever happened.<br>This is how you own it, own it, own it,<br>This is how you go forward.<br><br>Recognize your mistake, as a call to grow<br>Don't let it go to waste, make it count,<br>Stand up straight with your shoulders back, and<br>Don't have a single care about anyone else's opinion.<br><br>Find a way to learn from it, without a word to prove your worth,<br>Find a way to not repeat it, and forget it ever happened.<br><br>***";
@@ -57,9 +84,17 @@ const feelTheLightLyrics = "The night is white,<br>I am outside,<br>I am feeling
 const fightLyrics = "***<br><br>My brain is burning, my brain is burning.<br>Calmly, quietly I wait for an explosion of thoughts.<br>The water in my eyes is slowly coming,<br>Giggling towards me and posing a challenge,<br>For an unforgettable fight.<br><br>Chorus (x2):<br>The spirit in me trembles, trembles, trembles,<br>It slowly disintigrates into a glowing silhouette.<br>Light blinds evil spirits.<br><br>***<br><br>I am good, I am good,<br>Invincible, invincible,<br>always and everywhere.<br>I am good... I am good...<br>Let it be an unforgettable fight.<br><br>Chorus (x2):<br>The spirit in me trembles, trembles, trembles,<br>It slowly disintigrates into a glowing silhouette.<br>Light blinds evil spirits."
 
 const NO_LYRICS = "none";
-const LAST_SONG_ID = 66;
+const LAST_SONG_ID = 74;
 
 const allSongs = [
+    {id: "song74", name: "Earth [Sleeping At Last]song74", infocode: "1122", mins: 3, secs: 50, src: "./audio/bcsb-Earth.m4a", nameLen: 24, lyrics: NO_LYRICS},
+    {id: "song73", name: "Golden Leaves [Passenger]song73", infocode: "1122", mins: 3, secs: 40, src: "./audio/bcsb-GoldenLeaves.m4a", nameLen: 25, lyrics: NO_LYRICS},
+    {id: "song72", name: "Toxicitysong72", infocode: "0111", mins: 2, secs: 38, src: "./audio/eosp-Toxicity.m4a", nameLen: 8, lyrics: NO_LYRICS},
+    {id: "song71", name: "Promised Photoshootsong71", infocode: "0100", mins: 2, secs: 24, src: "./audio/sosg-PromisedPhotoshoot.m4a", nameLen: 19, lyrics: NO_LYRICS},
+    {id: "song70", name: "Life Instructionssong70", infocode: "0100", mins: 3, secs: 14, src: "./audio/sosg-LifeInstructions.m4a", nameLen: 17, lyrics: NO_LYRICS},
+    {id: "song69", name: "The Magiciansong69", infocode: "0110", mins: 3, secs: 41, src: "./audio/sosp-TheMagician.m4a", nameLen: 12, lyrics: NO_LYRICS},
+    {id: "song68", name: "Heart's Tracesong68", infocode: "0111", mins: 2, secs: 46, src: "./audio/eosp-HeartsTrace.m4a", nameLen: 13, lyrics: NO_LYRICS},
+    {id: "song67", name: "When We Were Young [Passenger]song67", infocode: "1100", mins: 3, secs: 43, src: "./audio/scsg-WhenWeWereYoung.m4a", nameLen: 30, lyrics: NO_LYRICS},
     {id: "song66", name: "Earth [Sleeping At Last]song66", infocode: "1110", mins: 3, secs: 40, src: "../audio/scsp-Earth.m4a", nameLen: 24, lyrics: NO_LYRICS},
     {id: "song65", name: "A Human That Makes Mistakessong65", infocode: "0100", mins: 1, secs: 41, src: "../audio/sosg-AHumanThatMakesMistakes.m4a", nameLen: 27, lyrics: aHumanThatMakesMistakesLyrics},
     {id: "song64", name: "Fightsong64", infocode: "0111", mins: 4, secs: 2, src: "../audio/eosp-Fight.m4a", nameLen: 5, lyrics: fightLyrics},
@@ -237,9 +272,6 @@ function addSongsToDiv(WHICH_DIV, sortinfo) {
 const MAIN_SONG_CONTAINER = 'mainSongContainer';
 addSongsToDiv(MAIN_SONG_CONTAINER, sortinfoAuthors);
 let CURRENT_SORT_INFOCODE_IDX = 3;
-
-const AUDIO = $('#mainAudio')[0];
-const AUDIOSRC = $('#mainAudio source');
 
 let CURRENT_SONG_IDX = 0;
 
