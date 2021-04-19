@@ -275,7 +275,7 @@ function playSong(songIdx) {
         
         setTimeout(() => {
             visualizeAudio(song.src);
-        }, 1000);
+        }, 500);
     }
 }
 
