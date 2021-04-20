@@ -60,7 +60,7 @@ function genSongInfo(id = "songX", name, src) {
     //      ic[3] = (o for simon, 1 for evgenija, 2 for both)
 }
 // ? e.g.
-// genSongInfo('song21', 'Jar Of Hearts [Christina Perri]', './audio/bcsb-JarOfHeartsNew.m4a');
+// genSongInfo('song77', 'The Secrets Of The World', './audio/soip-TheSecretsOfTheWorld.m4a');
 // ? e.g.
 
 const aboutThisGirlLyrics = "***<br><br>It was a perfect sunny day to spend outside,<br>The city park being the lucky place,<br>To be where it all began.<br><br>It was a perfect sunny day for laughs and laughs,<br>Bubi and Robi being the lucky ones,<br>To be how it all began.<br><br>It was already so perfect,<br>Looking, looking back even perfecter,<br>And now it's become the perfectest...<br>Let me tell you about this girl...<br><br>(x2)<br>With a smile that [warms] / [melts] the heart,<br>And with a voice that [takes your breath away] / [makes your day],<br>With a touch that [makes your blood rush] / [soothes your just right],<br>And with a heart so pure and gentle,<br>I could never ever have met a lovelier girl...<br><br>***<br><br>Let's celebrate all that we have...<br>All the times we turned our shy faces away;<br>All the times our hearts skiipped a beat,<br>When our roads would accidentally cross;<br>All the times we were brave enough to hug;<br>All the times we shared our music tastes;<br>All the times it was just me and you,<br>When time would stop and you'd be all that matters.<br><br>It was already so perfect,<br>Looking, looking back even perfecter,<br>And now it's become the perfectest...<br>Let me tell you about this girl...<br><br>(x2)<br>With a smile that [warms] / [melts] the heart,<br>And with a voice that [takes your breath away] / [makes your day],<br>With a touch that [makes your blood rush] / [soothes your just right],<br>And with a heart so pure and gentle,<br>I could never ever have met a lovelier girl...";
@@ -77,71 +77,81 @@ const twiceUponATimeLyrics = "There was a time<br>When we were<br>Just two shy k
 const imGladIFoundYouLyrics = "Take me into the night,<br>Into your arms, hug me tight.<br>In the cold you'll be my warmth,<br>In the dark I'll be your light.<br><br>Take me, sky high,<br>I'll show you how to fly.<br>In my wars, you'll be my peace,<br>In your skies, I'll be the stars.<br><br>(x2):<br>Oh yea, I'm glad I found you.<br><br>***<br><br>Take me, into adventures,<br>On the snow or in the water.<br>In the air, you'll be my parachute,<br>In the water, I'll be your safety net.<br><br>Take me, love me well,<br>Kiss me softly, I'll love you well.<br>On my birthday, you'll be my Fefi,<br>And on yours, I'll be your Pinko.<br><br>(x4):<br>Oh yea, I'm glad I found you.";
 const opportunityLyrics = "Hello, anybody? Am I all... alone?<br>It's fine, I don/t mind. It's just that, alone...<br><br>Memories are getting darker, day by day, but,<br>What's left for me to do now, but reminisce?<br><br>The years I played away, turns out,<br>They weren't wasted, they were the best.<br>The sunsets I used to watch...<br><br>All the little sandcastles I loved to bits,<br>All the little snowmen I wish I had made,<br>All the regrets that I now have...<br><br>Turns out everybody was right, they said life live to the fullest.<br>But I, I was too young to listen now I am too old to cry.<br><br>And now I worry, the sun is getting darker, again,<br>But this time I fear, there will be no sunrise.<br><br>And all I'm left with, is a lot of confusion,<br>And a lot to think about, and so little time.<br><br>Was all my purpose all this time, to be a little robot,<br>On this red planet, all alone?<br><br>***";
 const aSpecialMorningLyrics = "***<br><br>Chorus:<br>Waking up, with you, by my side, was enough.<br>I felt safer, than any time before.<br>All this love in the air, felt save to breathe.<br>Your eyes, full of sparks, kept me warm.<br><br>***<br><br>Snowflakes dancing outside,<br>Radio echoing inside,<br>Tea brewing silently,<br>Smiles sent with love.<br><br>Our heartbeats syncrhonized,<br>Hugs and hugs that keep us warm,<br>My lips softly touching yours,<br>Oxytocin flying around.<br><br>Chorus:<br>Waking up, with you, by my side, was enough.<br>I felt safer, than any time before.<br>All this love in the air, felt save to breathe.<br>Your eyes, full of sparks, kept me warm.<br><br>***<br><br>Sledding in the snow,<br>Snow in the photographs,<br>Photographs in memories,<br>Memories in happy smiles.<br><br>Keypresses on piano,<br>Into a song,<br>The song into a feeling,<br>The feeling of love.<br><br>Chorus:<br>Waking up, with you, by my side, was enough.<br>I felt safer, than any time before.<br>All this love in the air, felt save to breathe.<br>Your eyes, full of sparks, kept me warm.<br><br>***<br><br>Your eyes, full of sparks, kept me warm.";
-const aHumanThatMakesMistakesLyrics = "";
+const aHumanThatMakesMistakesLyrics = "It seems like in life,<br>nobody knows what they are doing,<br>or if they are right or wrong,<br>nobody knows, nobody has a clue.<br><br>But everybody tries,<br>to teach you how to do stuff,<br>to tell you what to do next,<br>everybody tries, tries so hard.<br><br>And I am tired of listening to the people,<br>I am tired of doubting myself,<br>doubting whether I might be wrong,<br>when nobody else cares at all.<br><br>Chorus (x2):<br>I am a human that makes mistakes,<br>I am so much more than being right,<br>A loving heart, A compassionate soul,<br>I have the right to be me.<br><br>It seems like I’ve unlearned,<br>how to follow you, my intuition.<br>From now on, I will trust you more,<br>like I should have done all along.<br><br>Chorus (x2):<br>I am a human that makes mistakes,<br>I am so much more than being right,<br>A loving heart, A compassionate soul,<br>I have the right to be me.<br><br>A loving heart, A compassionate soul.<br>I have the right to be me.";
+const theMagicianLyrics = "I was once set to watch,<br>This magician perform,<br>His magic trick,<br><br>So far from home.<br><br>And even though,<br>There he stood readily,<br>You could see the sorrow<br>Behind his face.<br><br>So I went up straight to him,<br>And asked him,<br><br>I wanna know your story.<br><br>And then on his darkened face,<br>I saw a glimpse of a lovely smile.<br>It was the best one I’ve ever seen.<br><br>***<br><br>Slowly, Cryingly,<br>He started to explain,<br>To put his feelings into words,<br>A heave poem.<br><br>I’m just like a magic trick,<br>Everyone sees me, knows I’m there,<br>Applauds, but nobody understands me.<br><br>So I tell him that’s not true,<br>There are people that care and<br>Really try their very best to understand.<br>And if you think about it,<br>You are so unique a person, no one<br>Can ever fully understand you,<br><br>Not even you…<br>But there are people that try…<br><br>And then, on his brightened face,<br>I saw a lovely smile,<br>But this time it didn’t go away…<br>But this time it didn’t go away…<br><br>***<br><br>And though I could never know,<br>For how long that smile stayed.<br><br>I did something today,<br>Something a million dollars cannot do.<br>And perhaps I was the only person,<br>That could’ve helped at that moment.<br><br>Which makes me realize,<br>That I too am so unique.<br><br>And there are so many people,<br>That truly care about me too.<br><br>And I know that, deep down.<br>And I believe that, deep down.<br>And I know that, deep down.<br><br>And I believe that… deep down.";
+const LifeInstructionsLyrics = "This one's a song built<br>From my bed in this tiny room,<br>In the half dark.<br><br>While it's a challenge,<br>A closed window could never stop me,<br>From dreaming away.<br><br>Life is so much more,<br>Than here and now,<br>Life is so much more,<br>Than hitting your head in a wall,<br>For what is gone or,<br>For what could've been.<br><br>Life is so much more,<br>Than keeping your head down,<br>Life is so much more,<br>Than blindly believing the rules of others,<br>For your judgement is what allows you,<br>To be you, and you is who I like to see.<br><br>Over the years,<br>I've come to notice,<br>That innovation keeps,<br>Life interesting.<br><br>It could be as little,<br>As a drinking straw you made,<br>Which goes to show,<br>You cannot have excuses.<br><br>Life is a bit like, dancing,<br>Feeling free to exist.<br>Life is a bit like, climbing,<br>Step by step, until the goal is complete,<br>Until the mountain becomes,<br>A distant forgotten fear.<br><br>Life is a bit like, flying,<br>Feeling free to explore,<br>Life is a bit like, a vibrating sea,<br>With no certain answer,<br>And none of the pieces make much sense on their own,<br>But together united, they form a beautiful complexity.<br><br>So please understand,<br>There's no certain answer,<br>It's up to you...<br>Live freely,<br>Be creative,<br>Love well,<br>And watch life's beauty unfold,<br>In front of you.";
+const brilliantMindsLyrics = "How beautiful, to be the one,<br>Who answers a question,<br>Generations old,<br>How beautiful...<br><br>To be the source,<br>Of people's inspiration,<br>Generations ahead,<br>How beautiful.<br><br>It's all those brilliant minds,<br>All hail those brilliant minds,<br>It's all those brilliant minds,<br>To thank for what we have.<br><br>It takes one's entire life,<br>For others to wonder how,<br>Generations later,<br>How?<br><br>It takes a thousand ideas,<br>And a thousand tries,<br>Until the right one,<br>Lights up.<br><br>It's all those brilliant minds,<br>All hail those brilliant minds,<br>It's all those brilliant minds,<br>To thank for what we have.";
+const promisedPhotoshootLyrics = "***<br><br>I look back through the albums,<br>But I cannot seem to find,<br>A single photograph of me.<br><br>I am now at September last year,<br>Yet no and no, my old profile<br>Picture, Still stands.<br><br>***<br><br>And the photoshoot I got promised,<br>Is now on delay, for the girl who promised,<br>Can now not come.<br><br>Thank god I have this guitar,<br>To play, keep me company,<br>Or I’d go mad.<br><br>***";
+const socialMediaLyrics = "***<br><br>When did I let you,<br>Get so out of control?<br>So out of control...<br><br>Hey, I am serious now,<br>You are so out of control,<br>And you damn well know that.<br><br>You are taking half my day,<br>Or at least I feel that way,<br>Anyways this has to stop.<br><br>***<br><br>Leave me alone,<br>The party’s over go home<br>Leave me alone,<br>The party’s over go home.<br><br>***";
 
 const hopeLyrics = "God, what have we become?<br>We turned into monsters,<br>lurking every moment,<br>into evil souls,<br>into evil silhouettes that break golden hearts.<br><br>Is there at least<br>A little hope left?<br>Hope for less malice,<br>Hope for melting stone hearts.<br><br>Are we going to throw out the selfishness<br>That has been poisoning us for a long time?<br><br>Is there at least<br>A little hope left?<br>Hope for less malice,<br>Hope for melting stone hearts.";
 const feelTheLightLyrics = "The night is white,<br>I am outside,<br>I am feeling the light.<br><br>(x2)<br>Oh, my face is cold,<br>But my soul is warm,<br>Oh, tonight,<br>Feel the light.<br><br>My heart is full,<br>There is no rule,<br>Just feel the light.<br><br>(x2)<br>Oh, my face is cold,<br>But my soul is warm,<br>Oh, tonight,<br>Feel the light.";
 const fightLyrics = "***<br><br>My brain is burning, my brain is burning.<br>Calmly, quietly I wait for an explosion of thoughts.<br>The water in my eyes is slowly coming,<br>Giggling towards me and posing a challenge,<br>For an unforgettable fight.<br><br>Chorus (x2):<br>The spirit in me trembles, trembles, trembles,<br>It slowly disintigrates into a glowing silhouette.<br>Light blinds evil spirits.<br><br>***<br><br>I am good, I am good,<br>Invincible, invincible,<br>always and everywhere.<br>I am good... I am good...<br>Let it be an unforgettable fight.<br><br>Chorus (x2):<br>The spirit in me trembles, trembles, trembles,<br>It slowly disintigrates into a glowing silhouette.<br>Light blinds evil spirits."
+const toxicityLyrics = "***<br><br>Hey, look at yourself,<br>Hey, throw out the posion hey.<br>You are what you are hey,<br>Don't throw the beauty,<br>You are wealthy hey.<br><br>Chorus (x2):<br>Crash the bottle, you don't need it hey.<br>Strenghten your body,<br>go have fun hey.<br><br>***<br><br>You are magnificent hey,<br>Non-destructive hey,<br>Non-destructive hey...<br><br>Chorus (x2):<br>Crash the bottle, you don't need it hey.<br>Strenghten your body,<br>go have fun hey.";
+const heartsTraceLyrics = "I don't remember when it started,<br>But I know very well<br>How my heart struck<br>I don't sleep all night.<br><br>Chorus (x2):<br>And you, what did you do?<br>You destroyed all my joys.<br>Your gaze was fake,<br>Left traces in my heart.<br><br>You're killing me again and again,<br>You're hitting all my tears.<br><br>Chorus (x2):<br>And you, what did you do?<br>You destroyed all my joys.<br>Your gaze was fake,<br>Left traces in my heart.";
 
 const NO_LYRICS = "none";
-const LAST_SONG_ID = 74;
+const LAST_SONG_ID = 77;
 
 const allSongs = [
-    {id: "song74", name: "Earth [Sleeping At Last]song74", infocode: "1122", mins: 3, secs: 50, src: "./audio/bcsb-Earth.m4a", nameLen: 24, lyrics: NO_LYRICS},
-    {id: "song73", name: "Golden Leaves [Passenger]song73", infocode: "1122", mins: 3, secs: 40, src: "./audio/bcsb-GoldenLeaves.m4a", nameLen: 25, lyrics: NO_LYRICS},
-    {id: "song72", name: "Toxicitysong72", infocode: "0111", mins: 2, secs: 38, src: "./audio/eosp-Toxicity.m4a", nameLen: 8, lyrics: NO_LYRICS},
-    {id: "song71", name: "Promised Photoshootsong71", infocode: "0100", mins: 2, secs: 24, src: "./audio/sosg-PromisedPhotoshoot.m4a", nameLen: 19, lyrics: NO_LYRICS},
-    {id: "song70", name: "Life Instructionssong70", infocode: "0100", mins: 3, secs: 14, src: "./audio/sosg-LifeInstructions.m4a", nameLen: 17, lyrics: NO_LYRICS},
-    {id: "song69", name: "The Magiciansong69", infocode: "0110", mins: 3, secs: 41, src: "./audio/sosp-TheMagician.m4a", nameLen: 12, lyrics: NO_LYRICS},
-    {id: "song68", name: "Heart's Tracesong68", infocode: "0111", mins: 2, secs: 46, src: "./audio/eosp-HeartsTrace.m4a", nameLen: 13, lyrics: NO_LYRICS},
-    {id: "song67", name: "When We Were Young [Passenger]song67", infocode: "1100", mins: 3, secs: 43, src: "./audio/scsg-WhenWeWereYoung.m4a", nameLen: 30, lyrics: NO_LYRICS},
-    {id: "song66", name: "Earth [Sleeping At Last]song66", infocode: "1110", mins: 3, secs: 40, src: "../audio/scsp-Earth.m4a", nameLen: 24, lyrics: NO_LYRICS},
-    {id: "song65", name: "A Human That Makes Mistakessong65", infocode: "0100", mins: 1, secs: 41, src: "../audio/sosg-AHumanThatMakesMistakes.m4a", nameLen: 27, lyrics: aHumanThatMakesMistakesLyrics},
-    {id: "song64", name: "Fightsong64", infocode: "0111", mins: 4, secs: 2, src: "../audio/eosp-Fight.m4a", nameLen: 5, lyrics: fightLyrics},
-    {id: "song63", name: "A Special Morningsong63", infocode: "0110", mins: 2, secs: 31, src: "../audio/sosp-ASpecialMorning.m4a", nameLen: 17, lyrics: aSpecialMorningLyrics},
-    {id: "song62", name: "Opportunitysong62", infocode: "0100", mins: 2, secs: 39, src: "../audio/sosg-Opportunity.m4a", nameLen: 11, lyrics: opportunityLyrics},
-    {id: "song61", name: "Driver's License [Olivia Rodrigo]song61", infocode: "1110", mins: 3, secs: 38, src: "../audio/scsp-DriversLicense.m4a", nameLen: 33, lyrics: NO_LYRICS},
-    {id: "song60", name: "I'm Glad I Found Yousong60", infocode: "0100", mins: 1, secs: 58, src: "../audio/sosg-ImGladIFoundYou.m4a", nameLen: 20, lyrics: imGladIFoundYouLyrics},
-    {id: "song59", name: "I'll Keep You Safe [Sleeping At Last]song59", infocode: "1110", mins: 3, secs: 56, src: "../audio/scsp-KeepYouSafe.m4a", nameLen: 37, lyrics: NO_LYRICS},
-    {id: "song58", name: "Twice Upon A Timesong58", infocode: "0110", mins: 2, secs: 13, src: "../audio/sosp-TwiceUponATime.m4a", nameLen: 17, lyrics: twiceUponATimeLyrics},
-    {id: "song57", name: "Wishessong57", infocode: "0110", mins: 2, secs: 17, src: "../audio/sosp-Wishes.m4a", nameLen: 6, lyrics: wishesLyrics},
-    {id: "song56", name: "Mountainsong56", infocode: "0010", mins: 2, secs: 12, src: "../audio/soip-Mountain.m4a", nameLen: 8, lyrics: NO_LYRICS},
-    {id: "song54", name: "Magical Momentssong54", infocode: "0100", mins: 2, secs: 9, src: "../audio/sosg-MagicalMoments.m4a", nameLen: 15, lyrics: magicalMomentsLyrics},
-    {id: "song53", name: "Wintersong53", infocode: "0011", mins: 1, secs: 36, src: "../audio/eoip-WinterNew.m4a", nameLen: 6, lyrics: NO_LYRICS},
-    {id: "song52", name: "Feel The Lightsong52", infocode: "0101", mins: 1, secs: 47, src: "../audio/eosg-FeelTheLight.m4a", nameLen: 14, lyrics: feelTheLightLyrics},
-    {id: "song51", name: "Lifesong51", infocode: "0110", mins: 3, secs: 22, src: "../audio/sosp-Life.m4a", nameLen: 4, lyrics: lifeLyrics},
-    {id: "song50", name: "Concert 18.12.2020 🥳 (50th Upload)song50", infocode: "0012", mins: 11, secs: 54, src: "../audio/boip-Concert_18-12-2020.m4a", nameLen: 35, lyrics: NO_LYRICS},
-    {id: "song48", name: "Limitlesssong48", infocode: "0100", mins: 3, secs: 38, src: "../audio/sosg-Limitless.m4a", nameLen: 9, lyrics: limitlessLyrics},
-    {id: "song46", name: "Surprisessong46", infocode: "0110", mins: 1, secs: 54, src: "../audio/sosp-Surprises.mp3", nameLen: 9, lyrics: surprisesLyrics},
-    {id: "song45", name: "Golden Leaves [Passenger]song45", infocode: "1100", mins: 3, secs: 27, src: "../audio/scsg-GoldenLeaves.m4a", nameLen: 25, lyrics: NO_LYRICS},
-    {id: "song44", name: "Before You Go [Lewis Capaldi]song44", infocode: "1111", mins: 3, secs: 28, src: "../audio/ecsp-BeforeYouGo.m4a", nameLen: 29, lyrics: NO_LYRICS},
-    {id: "song43", name: "Mistletoe [Justin Bieber]song43", infocode: "1101", mins: 3, secs: 7, src: "../audio/ecsg-Mistletoe.m4a", nameLen: 25, lyrics: NO_LYRICS},
-    {id: "song41", name: "Sign Of The Times [Harry Styles]song41", infocode: "1111", mins: 4, secs: 42, src: "../audio/ecsp-SignOfTheTimes.m4a", nameLen: 32, lyrics: NO_LYRICS},
-    {id: "song40", name: "Love Yourselfsong40", infocode: "0100", mins: 2, secs: 44, src: "../audio/sosg-LoveYourself.m4a", nameLen: 13, lyrics: loveYourselfLyrics},
-    {id: "song39", name: "Two [Sleeping At Last]song39", infocode: "1100", mins: 3, secs: 36, src: "../audio/scsg-Two.m4a", nameLen: 22, lyrics: NO_LYRICS},
-    {id: "song38", name: "Silent Nightsong38", infocode: "1101", mins: 3, secs: 27, src: "../audio/ecsg-SilentNight.m4a", nameLen: 12, lyrics: NO_LYRICS},
-    {id: "song37", name: "Improvisationssong37", infocode: "0010", mins: 2, secs: 20, src: "../audio/soip-Improvisations.mp3", nameLen: 14, lyrics: NO_LYRICS},
-    {id: "song35", name: "Let Her Go [Passenger]song35", infocode: "1102", mins: 3, secs: 55, src: "../audio/bcsg-LetHerGo.m4a", nameLen: 22, lyrics: NO_LYRICS},
-    {id: "song33", name: "Photograph [Ed Sheeran]song33", infocode: "1122", mins: 3, secs: 56, src: "../audio/bcsb-Photograph.m4a", nameLen: 23, lyrics: NO_LYRICS},
-    {id: "song31", name: "Hopesong31", infocode: "0101", mins: 2, secs: 32, src: "../audio/eosg-HopeNew.m4a", nameLen: 4, lyrics: hopeLyrics},
-    {id: "song30", name: "Concert 19.10.2020song30", infocode: "0012", mins: 3, secs: 16, src: "../audio/bosp-Concert_19-10-2020.m4a", nameLen: 18, lyrics: NO_LYRICS},
-    {id: "song26", name: "About This Girlsong26", infocode: "0100", mins: 3, secs: 22, src: "../audio/sosg-AboutThisGirlNew.m4a", nameLen: 15, lyrics: aboutThisGirlLyrics},
-    {id: "song27", name: "Go Forwardsong27", infocode: "0100", mins: 4, secs: 0, src: "../audio/sosg-GoForward.m4a", nameLen: 10, lyrics: goForwardLyrics},
-    {id: "song25", name: "Ice Creamsong25", infocode: "0010", mins: 2, secs: 48, src: "../audio/soip-IceCream.m4a", nameLen: 9, lyrics: NO_LYRICS},
-    {id: "song24", name: "Beautiful Birds [Passenger]song24", infocode: "1122", mins: 2, secs: 52, src: "../audio/bcsb-BeautifulBirds.m4a", nameLen: 27, lyrics: NO_LYRICS},
-    {id: "song23", name: "Bella Ciaosong23", infocode: "1111", mins: 2, secs: 15, src: "../audio/ecsp-BellaCiaoNew.m4a", nameLen: 10, lyrics: NO_LYRICS},
-    {id: "song22", name: "Quarantinesong22", infocode: "0011", mins: 1, secs: 0, src: "../audio/eoip-Quarantine.m4a", nameLen: 10, lyrics: NO_LYRICS},
-    {id: "song21", name: "Jar Of Hearts [Christina Perri]song21", infocode: "1122", mins: 3, secs: 29, src: "../audio/bcsb-JarOfHeartsNew.m4a", nameLen: 31, lyrics: NO_LYRICS},
-    {id: "song19", name: "Try [Pink]song19", infocode: "1101", mins: 1, secs: 48, src: "../audio/ecsg-Try.m4a", nameLen: 10, lyrics: NO_LYRICS},
-    {id: "song15", name: "Iraesong15", infocode: "0011", mins: 2, secs: 1, src: "../audio/eoip-Irae.m4a", nameLen: 4, lyrics: NO_LYRICS},
-    {id: "song14", name: "Hall Of Hellsong14", infocode: "0011", mins: 2, secs: 17, src: "../audio/eoip-HallOfHell.m4a", nameLen: 12, lyrics: NO_LYRICS},
-    {id: "song13", name: "Annihilationsong13", infocode: "0011", mins: 1, secs: 5, src: "../audio/eoip-Annihilation.m4a", nameLen: 12, lyrics: NO_LYRICS},
-    {id: "song12", name: "Astrumsong12", infocode: "0011", mins: 0, secs: 56, src: "../audio/eoip-Astrum.m4a", nameLen: 6, lyrics: NO_LYRICS},
-    {id: "song11", name: "Heart's Tracesong11", infocode: "0011", mins: 2, secs: 31, src: "../audio/eoip-HeartsTrace.m4a", nameLen: 13, lyrics: NO_LYRICS},
-    {id: "song10", name: "Always Remember Us This Way [Lady Gaga]song10", infocode: "1111", mins: 2, secs: 27, src: "../audio/ecsp-AlwaysRememberUsThisWay.m4a", nameLen: 39, lyrics: NO_LYRICS},
-    {id: "song6", name: "Emiriasong6", infocode: "0010", mins: 1, secs: 3, src: "../audio/soip-GiftInEm.m4a", nameLen: 6, lyrics: NO_LYRICS},
-    {id: "song4", name: "Hi :)song4", infocode: "0010", mins: 1, secs: 45, src: "../audio/soip-Hi.m4a", nameLen: 5, lyrics: NO_LYRICS},
-    {id: "song2", name: "Aiterkastersong2", infocode: "0010", mins: 2, secs: 24, src: "../audio/soip-Aiterkaster.m4a", nameLen: 11, lyrics: NO_LYRICS},
+    {id: "song77", name: "The Secrets Of The Worldsong77", infocode: "0010c", mins: 1, secs: 53, src: "./audio/soip-TheSecretsOfTheWorld.m4a", nameLen: 24, lyrics: NO_LYRICS},
+    {id: "song76", name: "Social Mediasong75", infocode: "0100c", mins: 1, secs: 37, src: "./audio/sosg-SocialMedia.m4a", nameLen: 12, lyrics: socialMediaLyrics},
+    {id: "song75", name: "Brilliant Mindssong74", infocode: "0110z", mins: 1, secs: 28, src: "./audio/sosp-BrilliantMinds.m4a", nameLen: 15, lyrics: brilliantMindsLyrics},
+    {id: "song74", name: "Earth [Sleeping At Last]song74", infocode: "1122z", mins: 3, secs: 50, src: "./audio/bcsb-Earth.m4a", nameLen: 24, lyrics: NO_LYRICS},
+    {id: "song73", name: "Golden Leaves [Passenger]song73", infocode: "1122z", mins: 3, secs: 40, src: "./audio/bcsb-GoldenLeaves.m4a", nameLen: 25, lyrics: NO_LYRICS},
+    {id: "song72", name: "Toxicitysong72", infocode: "0111z", mins: 2, secs: 38, src: "./audio/eosp-Toxicity.m4a", nameLen: 8, lyrics: toxicityLyrics},
+    {id: "song71", name: "Promised Photoshootsong71", infocode: "0100c", mins: 2, secs: 24, src: "./audio/sosg-PromisedPhotoshoot.m4a", nameLen: 19, lyrics: promisedPhotoshootLyrics},
+    {id: "song70", name: "Life Instructionssong70", infocode: "0100b", mins: 3, secs: 14, src: "./audio/sosg-LifeInstructions.m4a", nameLen: 17, lyrics: LifeInstructionsLyrics},
+    {id: "song69", name: "The Magiciansong69", infocode: "0110c", mins: 3, secs: 41, src: "./audio/sosp-TheMagician.m4a", nameLen: 12, lyrics: theMagicianLyrics},
+    {id: "song68", name: "Heart's Tracesong68", infocode: "0111z", mins: 2, secs: 46, src: "./audio/eosp-HeartsTrace.m4a", nameLen: 13, lyrics: heartsTraceLyrics},
+    {id: "song67", name: "When We Were Young [Passenger]song67", infocode: "1100z", mins: 3, secs: 43, src: "./audio/scsg-WhenWeWereYoung.m4a", nameLen: 30, lyrics: NO_LYRICS},
+    {id: "song66", name: "Earth [Sleeping At Last]song66", infocode: "1110z", mins: 3, secs: 40, src: "../audio/scsp-Earth.m4a", nameLen: 24, lyrics: NO_LYRICS},
+    {id: "song65", name: "A Human That Makes Mistakessong65", infocode: "0100b", mins: 1, secs: 41, src: "../audio/sosg-AHumanThatMakesMistakes.m4a", nameLen: 27, lyrics: aHumanThatMakesMistakesLyrics},
+    {id: "song64", name: "Fightsong64", infocode: "0111z", mins: 4, secs: 2, src: "../audio/eosp-Fight.m4a", nameLen: 5, lyrics: fightLyrics},
+    {id: "song63", name: "A Special Morningsong63", infocode: "0110b", mins: 2, secs: 31, src: "../audio/sosp-ASpecialMorning.m4a", nameLen: 17, lyrics: aSpecialMorningLyrics},
+    {id: "song62", name: "Opportunitysong62", infocode: "0100b", mins: 2, secs: 39, src: "../audio/sosg-Opportunity.m4a", nameLen: 11, lyrics: opportunityLyrics},
+    {id: "song61", name: "Driver's License [Olivia Rodrigo]song61", infocode: "1110z", mins: 3, secs: 38, src: "../audio/scsp-DriversLicense.m4a", nameLen: 33, lyrics: NO_LYRICS},
+    {id: "song60", name: "I'm Glad I Found Yousong60", infocode: "0100b", mins: 1, secs: 58, src: "../audio/sosg-ImGladIFoundYou.m4a", nameLen: 20, lyrics: imGladIFoundYouLyrics},
+    {id: "song59", name: "I'll Keep You Safe [Sleeping At Last]song59", infocode: "1110z", mins: 3, secs: 56, src: "../audio/scsp-KeepYouSafe.m4a", nameLen: 37, lyrics: NO_LYRICS},
+    {id: "song58", name: "Twice Upon A Timesong58", infocode: "0110z", mins: 2, secs: 13, src: "../audio/sosp-TwiceUponATime.m4a", nameLen: 17, lyrics: twiceUponATimeLyrics},
+    {id: "song57", name: "Wishessong57", infocode: "0110z", mins: 2, secs: 17, src: "../audio/sosp-Wishes.m4a", nameLen: 6, lyrics: wishesLyrics},
+    {id: "song56", name: "Mountainsong56", infocode: "0010z", mins: 2, secs: 12, src: "../audio/soip-Mountain.m4a", nameLen: 8, lyrics: NO_LYRICS},
+    {id: "song54", name: "Magical Momentssong54", infocode: "0100b", mins: 2, secs: 9, src: "../audio/sosg-MagicalMoments.m4a", nameLen: 15, lyrics: magicalMomentsLyrics},
+    {id: "song53", name: "Wintersong53", infocode: "0011z", mins: 1, secs: 36, src: "../audio/eoip-WinterNew.m4a", nameLen: 6, lyrics: NO_LYRICS},
+    {id: "song52", name: "Feel The Lightsong52", infocode: "0101z", mins: 1, secs: 47, src: "../audio/eosg-FeelTheLight.m4a", nameLen: 14, lyrics: feelTheLightLyrics},
+    {id: "song51", name: "Lifesong51", infocode: "0110b", mins: 3, secs: 22, src: "../audio/sosp-Life.m4a", nameLen: 4, lyrics: lifeLyrics},
+    {id: "song50", name: "Concert 18.12.2020 🥳 (50th Upload)song50", infocode: "0012z", mins: 11, secs: 54, src: "../audio/boip-Concert_18-12-2020.m4a", nameLen: 35, lyrics: NO_LYRICS},
+    {id: "song48", name: "Limitlesssong48", infocode: "0100a", mins: 3, secs: 38, src: "../audio/sosg-Limitless.m4a", nameLen: 9, lyrics: limitlessLyrics},
+    {id: "song46", name: "Surprisessong46", infocode: "0110a", mins: 1, secs: 54, src: "../audio/sosp-Surprises.mp3", nameLen: 9, lyrics: surprisesLyrics},
+    {id: "song45", name: "Golden Leaves [Passenger]song45", infocode: "1100z", mins: 3, secs: 27, src: "../audio/scsg-GoldenLeaves.m4a", nameLen: 25, lyrics: NO_LYRICS},
+    {id: "song44", name: "Before You Go [Lewis Capaldi]song44", infocode: "1111z", mins: 3, secs: 28, src: "../audio/ecsp-BeforeYouGo.m4a", nameLen: 29, lyrics: NO_LYRICS},
+    {id: "song43", name: "Mistletoe [Justin Bieber]song43", infocode: "1101z", mins: 3, secs: 7, src: "../audio/ecsg-Mistletoe.m4a", nameLen: 25, lyrics: NO_LYRICS},
+    {id: "song41", name: "Sign Of The Times [Harry Styles]song41", infocode: "1111z", mins: 4, secs: 42, src: "../audio/ecsp-SignOfTheTimes.m4a", nameLen: 32, lyrics: NO_LYRICS},
+    {id: "song40", name: "Love Yourselfsong40", infocode: "0100a", mins: 2, secs: 44, src: "../audio/sosg-LoveYourself.m4a", nameLen: 13, lyrics: loveYourselfLyrics},
+    {id: "song39", name: "Two [Sleeping At Last]song39", infocode: "1100z", mins: 3, secs: 36, src: "../audio/scsg-Two.m4a", nameLen: 22, lyrics: NO_LYRICS},
+    {id: "song38", name: "Silent Nightsong38", infocode: "1101z", mins: 3, secs: 27, src: "../audio/ecsg-SilentNight.m4a", nameLen: 12, lyrics: NO_LYRICS},
+    {id: "song37", name: "Improvisationssong37", infocode: "0010z", mins: 2, secs: 20, src: "../audio/soip-Improvisations.mp3", nameLen: 14, lyrics: NO_LYRICS},
+    {id: "song35", name: "Let Her Go [Passenger]song35", infocode: "1102z", mins: 3, secs: 55, src: "../audio/bcsg-LetHerGo.m4a", nameLen: 22, lyrics: NO_LYRICS},
+    {id: "song33", name: "Photograph [Ed Sheeran]song33", infocode: "1122z", mins: 3, secs: 56, src: "../audio/bcsb-Photograph.m4a", nameLen: 23, lyrics: NO_LYRICS},
+    {id: "song31", name: "Hopesong31", infocode: "0101z", mins: 2, secs: 32, src: "../audio/eosg-HopeNew.m4a", nameLen: 4, lyrics: hopeLyrics},
+    {id: "song30", name: "Concert 19.10.2020song30", infocode: "0012z", mins: 3, secs: 16, src: "../audio/bosp-Concert_19-10-2020.m4a", nameLen: 18, lyrics: NO_LYRICS},
+    {id: "song26", name: "About This Girlsong26", infocode: "0100a", mins: 3, secs: 22, src: "../audio/sosg-AboutThisGirlNew.m4a", nameLen: 15, lyrics: aboutThisGirlLyrics},
+    {id: "song27", name: "Go Forwardsong27", infocode: "0100a", mins: 4, secs: 0, src: "../audio/sosg-GoForward.m4a", nameLen: 10, lyrics: goForwardLyrics},
+    {id: "song25", name: "Ice Creamsong25", infocode: "0010z", mins: 2, secs: 48, src: "../audio/soip-IceCream.m4a", nameLen: 9, lyrics: NO_LYRICS},
+    {id: "song24", name: "Beautiful Birds [Passenger]song24", infocode: "1122z", mins: 2, secs: 52, src: "../audio/bcsb-BeautifulBirds.m4a", nameLen: 27, lyrics: NO_LYRICS},
+    {id: "song23", name: "Bella Ciaosong23", infocode: "1111z", mins: 2, secs: 15, src: "../audio/ecsp-BellaCiaoNew.m4a", nameLen: 10, lyrics: NO_LYRICS},
+    {id: "song22", name: "Quarantinesong22", infocode: "0011z", mins: 1, secs: 0, src: "../audio/eoip-Quarantine.m4a", nameLen: 10, lyrics: NO_LYRICS},
+    {id: "song21", name: "Jar Of Hearts [Christina Perri]song21", infocode: "1122z", mins: 3, secs: 29, src: "../audio/bcsb-JarOfHeartsNew.m4a", nameLen: 31, lyrics: NO_LYRICS},
+    {id: "song19", name: "Try [Pink]song19", infocode: "1101z", mins: 1, secs: 48, src: "../audio/ecsg-Try.m4a", nameLen: 10, lyrics: NO_LYRICS},
+    {id: "song15", name: "Iraesong15", infocode: "0011z", mins: 2, secs: 1, src: "../audio/eoip-Irae.m4a", nameLen: 4, lyrics: NO_LYRICS},
+    {id: "song14", name: "Hall Of Hellsong14", infocode: "0011z", mins: 2, secs: 17, src: "../audio/eoip-HallOfHell.m4a", nameLen: 12, lyrics: NO_LYRICS},
+    {id: "song13", name: "Annihilationsong13", infocode: "0011z", mins: 1, secs: 5, src: "../audio/eoip-Annihilation.m4a", nameLen: 12, lyrics: NO_LYRICS},
+    {id: "song12", name: "Astrumsong12", infocode: "0011z", mins: 0, secs: 56, src: "../audio/eoip-Astrum.m4a", nameLen: 6, lyrics: NO_LYRICS},
+    {id: "song11", name: "Heart's Tracesong11", infocode: "0011z", mins: 2, secs: 31, src: "../audio/eoip-HeartsTrace.m4a", nameLen: 13, lyrics: NO_LYRICS},
+    {id: "song10", name: "Always Remember Us This Way [Lady Gaga]song10", infocode: "1111z", mins: 2, secs: 27, src: "../audio/ecsp-AlwaysRememberUsThisWay.m4a", nameLen: 39, lyrics: NO_LYRICS},
+    {id: "song6", name: "Emiriasong6", infocode: "0010z", mins: 1, secs: 3, src: "../audio/soip-GiftInEm.m4a", nameLen: 6, lyrics: NO_LYRICS},
+    {id: "song4", name: "Hi :)song4", infocode: "0010z", mins: 1, secs: 45, src: "../audio/soip-Hi.m4a", nameLen: 5, lyrics: NO_LYRICS},
+    {id: "song2", name: "Aiterkastersong2", infocode: "0010z", mins: 2, secs: 24, src: "../audio/soip-Aiterkaster.m4a", nameLen: 11, lyrics: NO_LYRICS},
 ];
 
 const TOTAL_SONGS = allSongs.length;
@@ -177,6 +187,14 @@ const sortinfoVocals = [
     {label: "Instrumental songs.", ordercode: '0'},
 ]
 
+const sortinfoAlbums = [
+    {label: 'Sorted by: Albums.', ordercode: 4},
+    {label: 'Album: Beliefs.', ordercode: 'a'},
+    {label: 'Album: Life.', ordercode: 'b'},
+    {label: 'Album: Experiments.', ordercode: 'c'},
+    {label: 'Unlisted songs.', ordercode: 'z'},
+]
+
 function addClassesToCircles(c1, c2, c3, c4, infocode) {
     const e1 = $('#'+c1);
     const e2 = $('#'+c2);
@@ -198,7 +216,6 @@ function addSongsToDiv(WHICH_DIV, sortinfo) {
     let IDX = 0;
     const SORT_LABEL = nullPrefix + 'BL' + IDX++;
     addElement(WHICH_DIV, 'p', SORT_LABEL, baseLabel);
-    // addElement(WHICH_DIV, 'p', SORT_LABEL, 'Test1');
 
     const ALL_INSTANCES_CONTAINER = nullPrefix + 'AIC' + IDX++;
     addElement(WHICH_DIV, 'div', ALL_INSTANCES_CONTAINER, '');
@@ -212,7 +229,6 @@ function addSongsToDiv(WHICH_DIV, sortinfo) {
         addElement(ALL_INSTANCES_CONTAINER, 'div', SINGLE_INSTANCE_CONTAINER, '');
 
         const SPECIFIC_SORT_LABEL = nullPrefix + 'SSL' + IDX++;
-        // addElement(SINGLE_INSTANCE_CONTAINER, 'p', SPECIFIC_SORT_LABEL, 'Phase 1');
         addElement(SINGLE_INSTANCE_CONTAINER, 'p', SPECIFIC_SORT_LABEL, currentInstance.label);
 
         const ALL_SONGS_CONTAINER = nullPrefix + 'ASC' + IDX++;
@@ -249,7 +265,6 @@ function addSongsToDiv(WHICH_DIV, sortinfo) {
 
                         $('#'+ICON).toggleClass('fas fa-music far fa-play-circle');
                     }, 230)
-                    // $('#'+ICON).toggleClass('fas fa-music far fa-file-audio');
                 })
                 
                 const songTitle = song.name.substr(0, song.nameLen);
@@ -260,8 +275,6 @@ function addSongsToDiv(WHICH_DIV, sortinfo) {
                 const SONG_TITLE_LABEL = idPrefix + 'STL';
                 const SONG_DURATION_LABEL = idPrefix + 'SDL';
                 
-                // addElement(SINGLE_SONG_CONTAINER, 'p', SONG_TITLE_LABEL, 'TTT');
-                // addElement(SINGLE_SONG_CONTAINER, 'p', SONG_DURATION_LABEL, 'PPP');
                 addElement(SINGLE_SONG_CONTAINER, 'p', SONG_TITLE_LABEL, songTitle);
                 addElement(SINGLE_SONG_CONTAINER, 'p', SONG_DURATION_LABEL, songDuration);
             }
@@ -480,6 +493,35 @@ function getInfocodemaxidx(infocodeidx) {
     if (infocodeidx == 1) return 1;
     if (infocodeidx == 2) return 2; // 0..2
     if (infocodeidx == 3) return 2;
+    if (infocodeidx == 4) return 'z';
+}
+
+function getPrevSortedInfocodeIdxVal(infocodeidxval, infocodemaxidx) {
+    if (CURRENT_SORT_INFOCODE_IDX == 4) { // CODE 4 = ALBUMS
+        infocodeidxval = String.fromCharCode(infocodeidxval.charCodeAt(0) - 1);
+        if (infocodeidxval < 0) {
+            infocodeidxval = infocodemaxidx;
+        }
+    }
+    else {
+        infocodeidxval--;
+        if (infocodeidxval < 0) infocodeidxval = infocodemaxidx;
+    }
+    return infocodeidxval;
+}
+
+function getNextSortedInfocodeIdxVal(infocodeidxval, infocodemaxidx) {
+    if (CURRENT_SORT_INFOCODE_IDX == 4) { // CODE 4 = ALBUMS
+        infocodeidxval = String.fromCharCode(infocodeidxval.charCodeAt(0) + 1);
+        if (infocodeidxval > infocodemaxidx) {
+            infocodeidxval = 'a';
+        }
+    }
+    else {
+        infocodeidxval++;    
+        if (infocodeidxval > infocodemaxidx) infocodeidxval = 0;
+    }
+    return infocodeidxval;
 }
 
 function playPreviousSong() {
@@ -500,8 +542,7 @@ function playPreviousSong() {
         let start = songIdx-1;
         if (start < 0) {
             start = TOTAL_SONGS-1;
-            infocodeidxval--;
-            if (infocodeidxval < 0) infocodeidxval = infocodemaxidx;
+            infocodeidxval = getPrevSortedInfocodeIdxVal(infocodeidxval, infocodemaxidx);
         }
 
         // go to the rest of the songs to find a song from the same sorting info (e.g. author); if not found, start from the beginning and search for the next author.
@@ -514,8 +555,7 @@ function playPreviousSong() {
             
             if (i == 0) {
                 i = TOTAL_SONGS;
-                infocodeidxval--;
-                if (infocodeidxval < 0) infocodeidxval = infocodemaxidx;
+                infocodeidxval = getPrevSortedInfocodeIdxVal(infocodeidxval, infocodemaxidx);
             }
         }
     }
@@ -549,22 +589,21 @@ function playNextSong() {
         let start = songIdx+1;
         if (start >= TOTAL_SONGS) {
             start = 0;
-            infocodeidxval++;
-            if (infocodeidxval > infocodemaxidx) infocodeidxval = 0;
+            infocodeidxval = getNextSortedInfocodeIdxVal(infocodeidxval, infocodemaxidx);
         }
 
         // go to the rest of the songs to find a song from the same sorting info (e.g. author); if not found, start from the beginning and search for the next author.
         for (let i = start; i < TOTAL_SONGS; i++) {
             newSong = allSongs[i];
+            // console.log(i + ' ' + infocodeidxval + ' ' + newSong.infocode[CURRENT_SORT_INFOCODE_IDX])
             if (infocodeidxval == newSong.infocode[CURRENT_SORT_INFOCODE_IDX]) {
                 newIdx = i;
                 break;
             }
-            
+       
             if (i == TOTAL_SONGS-1) {
                 i = -1;
-                infocodeidxval++;
-                if (infocodeidxval > infocodemaxidx) infocodeidxval = 0;
+                infocodeidxval = getNextSortedInfocodeIdxVal(infocodeidxval, infocodemaxidx);
             }
         }
     }
@@ -623,6 +662,11 @@ $('#btnSortByOriginality').click(() => {
 $('#btnSortByVocals').click(() => {
     addSongsToDiv(MAIN_SONG_CONTAINER, sortinfoVocals);
     CURRENT_SORT_INFOCODE_IDX = 1;
+})
+
+$('#btnSortByAlbums').click(() => {
+    addSongsToDiv(MAIN_SONG_CONTAINER, sortinfoAlbums);
+    CURRENT_SORT_INFOCODE_IDX = 4;
 })
 
 $('#btnPlayback').click(() => {

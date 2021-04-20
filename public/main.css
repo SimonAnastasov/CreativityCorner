@@ -41,7 +41,11 @@ body div#generalSettingsContainer div.iconAndDesc p {
 }
 
 body div#generalSettingsContainer div.iconAndDesc.inline:hover {
-  width: 460px;
+  width: 550px;
+}
+
+body div#generalSettingsContainer div.iconAndDesc#btnPlayback:hover {
+  width: 300px;
 }
 
 body div#generalSettingsContainer div.iconAndDesc:hover {
@@ -359,7 +363,7 @@ body div.modalSong div.modalMain h3 {
   }
   body div#generalSettingsContainer div.iconAndDesc.inline:hover {
     width: 100px;
-    height: 220px;
+    height: 250px;
   }
   body div#generalSettingsContainer div.iconAndDesc.inline:hover > div {
     display: -webkit-box;
