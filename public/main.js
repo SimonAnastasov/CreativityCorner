@@ -43,7 +43,7 @@ function encodeInfocode(code) {
 function genSongInfo(id = "songX", name, src) {
     let txt = "";
     const nameLen = name.length;
-    const infocode = encodeInfocode(src.substr(8, 4));
+    const infocode = encodeInfocode(src.substr(8, 4)) + 'z';
     AUDIOSRC.attr('src', src);
     AUDIO.load();
     setTimeout(() => {
@@ -60,7 +60,7 @@ function genSongInfo(id = "songX", name, src) {
     //      ic[3] = (o for simon, 1 for evgenija, 2 for both)
 }
 // ? e.g.
-// genSongInfo('song77', 'The Secrets Of The World', './audio/soip-TheSecretsOfTheWorld.m4a');
+// genSongInfo('song78', 'I Want To Spend A Lifetime Loving You 👵👴', './audio/bcsp-IWantToSpendMyLifetimeLovingYou.m4a');
 // ? e.g.
 
 const aboutThisGirlLyrics = "***<br><br>It was a perfect sunny day to spend outside,<br>The city park being the lucky place,<br>To be where it all began.<br><br>It was a perfect sunny day for laughs and laughs,<br>Bubi and Robi being the lucky ones,<br>To be how it all began.<br><br>It was already so perfect,<br>Looking, looking back even perfecter,<br>And now it's become the perfectest...<br>Let me tell you about this girl...<br><br>(x2)<br>With a smile that [warms] / [melts] the heart,<br>And with a voice that [takes your breath away] / [makes your day],<br>With a touch that [makes your blood rush] / [soothes your just right],<br>And with a heart so pure and gentle,<br>I could never ever have met a lovelier girl...<br><br>***<br><br>Let's celebrate all that we have...<br>All the times we turned our shy faces away;<br>All the times our hearts skiipped a beat,<br>When our roads would accidentally cross;<br>All the times we were brave enough to hug;<br>All the times we shared our music tastes;<br>All the times it was just me and you,<br>When time would stop and you'd be all that matters.<br><br>It was already so perfect,<br>Looking, looking back even perfecter,<br>And now it's become the perfectest...<br>Let me tell you about this girl...<br><br>(x2)<br>With a smile that [warms] / [melts] the heart,<br>And with a voice that [takes your breath away] / [makes your day],<br>With a touch that [makes your blood rush] / [soothes your just right],<br>And with a heart so pure and gentle,<br>I could never ever have met a lovelier girl...";
@@ -91,9 +91,10 @@ const toxicityLyrics = "***<br><br>Hey, look at yourself,<br>Hey, throw out the 
 const heartsTraceLyrics = "I don't remember when it started,<br>But I know very well<br>How my heart struck<br>I don't sleep all night.<br><br>Chorus (x2):<br>And you, what did you do?<br>You destroyed all my joys.<br>Your gaze was fake,<br>Left traces in my heart.<br><br>You're killing me again and again,<br>You're hitting all my tears.<br><br>Chorus (x2):<br>And you, what did you do?<br>You destroyed all my joys.<br>Your gaze was fake,<br>Left traces in my heart.";
 
 const NO_LYRICS = "none";
-const LAST_SONG_ID = 77;
+const LAST_SONG_ID = 78;
 
 const allSongs = [
+    {id: "song78", name: "I Want To Spend A Lifetime Loving You 👵👴song78", infocode: "1112z", mins: 4, secs: 14, src: "./audio/bcsp-IWantToSpendMyLifetimeLovingYou.m4a", nameLen: 42, lyrics: NO_LYRICS},
     {id: "song76", name: "Social Media 📱song75", infocode: "0100c", mins: 1, secs: 37, src: "./audio/sosg-SocialMedia.m4a", nameLen: 15, lyrics: socialMediaLyrics},
     {id: "song77", name: "The Secrets Of The World 🔐song77", infocode: "0010c", mins: 1, secs: 53, src: "./audio/soip-TheSecretsOfTheWorld.m4a", nameLen: 27, lyrics: NO_LYRICS},
     {id: "song75", name: "Brilliant Minds 🧠song74", infocode: "0110z", mins: 1, secs: 28, src: "./audio/sosp-BrilliantMinds.m4a", nameLen: 18, lyrics: brilliantMindsLyrics},
@@ -455,6 +456,7 @@ const modalImages = [
     {src: './images/11c.jpg', infocode: '11'},
     {src: './images/11d.jpg', infocode: '11'},
     {src: './images/12a.jpg', infocode: '12'},
+    {src: './images/12b.jpg', infocode: '12'},
     {src: './images/22a.jpg', infocode: '22'},
     {src: './images/22b.jpg', infocode: '22'},
 ]
