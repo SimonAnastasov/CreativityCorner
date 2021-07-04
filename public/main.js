@@ -60,7 +60,7 @@ function genSongInfo(id = "songX", name, src) {
     //      ic[3] = (o for simon, 1 for evgenija, 2 for both)
 }
 // ? e.g.
-// genSongInfo('song78', 'I Want To Spend A Lifetime Loving You 👵👴', './audio/bcsp-IWantToSpendMyLifetimeLovingYou.m4a');
+// genSongInfo('song79', 'The Stars & You 🌟✨', './audio/sosp-TheStarsAndYou.m4a');
 // ? e.g.
 
 const aboutThisGirlLyrics = "***<br><br>It was a perfect sunny day to spend outside,<br>The city park being the lucky place,<br>To be where it all began.<br><br>It was a perfect sunny day for laughs and laughs,<br>Bubi and Robi being the lucky ones,<br>To be how it all began.<br><br>It was already so perfect,<br>Looking, looking back even perfecter,<br>And now it's become the perfectest...<br>Let me tell you about this girl...<br><br>(x2)<br>With a smile that [warms] / [melts] the heart,<br>And with a voice that [takes your breath away] / [makes your day],<br>With a touch that [makes your blood rush] / [soothes your just right],<br>And with a heart so pure and gentle,<br>I could never ever have met a lovelier girl...<br><br>***<br><br>Let's celebrate all that we have...<br>All the times we turned our shy faces away;<br>All the times our hearts skiipped a beat,<br>When our roads would accidentally cross;<br>All the times we were brave enough to hug;<br>All the times we shared our music tastes;<br>All the times it was just me and you,<br>When time would stop and you'd be all that matters.<br><br>It was already so perfect,<br>Looking, looking back even perfecter,<br>And now it's become the perfectest...<br>Let me tell you about this girl...<br><br>(x2)<br>With a smile that [warms] / [melts] the heart,<br>And with a voice that [takes your breath away] / [makes your day],<br>With a touch that [makes your blood rush] / [soothes your just right],<br>And with a heart so pure and gentle,<br>I could never ever have met a lovelier girl...";
@@ -94,6 +94,7 @@ const NO_LYRICS = "none";
 const LAST_SONG_ID = 78;
 
 const allSongs = [
+    {id: "song79", name: "The Stars & You 🌟✨song79", infocode: "0110z", mins: 3, secs: 0, src: "./audio/sosp-TheStarsAndYou.m4a", nameLen: 19, lyrics: NO_LYRICS},
     {id: "song78", name: "I Want To Spend A Lifetime Loving You 👵👴song78", infocode: "1112z", mins: 4, secs: 14, src: "./audio/bcsp-IWantToSpendMyLifetimeLovingYou.m4a", nameLen: 42, lyrics: NO_LYRICS},
     {id: "song76", name: "Social Media 📱song75", infocode: "0100c", mins: 1, secs: 37, src: "./audio/sosg-SocialMedia.m4a", nameLen: 15, lyrics: socialMediaLyrics},
     {id: "song77", name: "The Secrets Of The World 🔐song77", infocode: "0010c", mins: 1, secs: 53, src: "./audio/soip-TheSecretsOfTheWorld.m4a", nameLen: 27, lyrics: NO_LYRICS},
