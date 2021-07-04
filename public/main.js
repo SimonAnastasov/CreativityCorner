@@ -759,15 +759,26 @@ $('#canvas').click(e => {
     mainAudio.currentTime = newSongTime;
 })
 
+// VISUALIZER
+function getRndData() {
+    let rndArr = [];
+    for (let i = 0; i < 100; i++) {
+        let rndVal = getRnd(0.3, 0.7);
+        rndArr.push(rndVal);
+    }
+    return rndArr;
+}
+
 window.AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioContext = new AudioContext();
 let currentBuffer = null;
 
 function visualizeAudio(url) {
-    fetch(url)
-        .then(response => response.arrayBuffer())
-        .then(arrayBuffer => audioContext.decodeAudioData(arrayBuffer))
-        .then(audioBuffer => draw(normalizeData(filterData(audioBuffer))));
+    // fetch(url)
+    //     .then(response => response.arrayBuffer())
+    //     .then(arrayBuffer => audioContext.decodeAudioData(arrayBuffer))
+    //     .then(audioBuffer => draw(normalizeData(filterData(audioBuffer))));
+    draw(getRndData());
 }
 
 socket.on('visualizeAudio', normalizedData => {
@@ -796,6 +807,7 @@ function normalizeData(filteredData) {
 }
 
 function draw(normalizedData) {
+    // console.log(normalizedData);
     const canvas = document.querySelector('canvas');
     const dpr = window.devicePixelRatio || 1;
     const padding = 20;
