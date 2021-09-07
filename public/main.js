@@ -59,12 +59,13 @@ function genSongInfo(id = "songX", name, src) {
     //      ic[2] = (0 for guitar, 1 for piano, 2 for both)
     //      ic[3] = (o for simon, 1 for evgenija, 2 for both)
 }
-// ? e.g.
-// genSongInfo('song80', 'Hey Darling 🍪💌', './audio/sosp-HeyDarling.m4a');
-// ? e.g.
 
 const NO_LYRICS = "none";
-const LAST_SONG_ID = 80;
+const LAST_SONG_ID = 84;
+
+// ? e.g.
+// genSongInfo('song'+LAST_SONG_ID, 'What A Wonderful World 🌳🌤🌈', './audio/bcsp-WhatAWonderfulWorld.mp3');
+// ? e.g.
 
 const aboutThisGirlLyrics = "***<br><br>It was a perfect sunny day to spend outside,<br>The city park being the lucky place,<br>To be where it all began.<br><br>It was a perfect sunny day for laughs and laughs,<br>Bubi and Robi being the lucky ones,<br>To be how it all began.<br><br>It was already so perfect,<br>Looking, looking back even perfecter,<br>And now it's become the perfectest...<br>Let me tell you about this girl...<br><br>(x2)<br>With a smile that [warms] / [melts] the heart,<br>And with a voice that [takes your breath away] / [makes your day],<br>With a touch that [makes your blood rush] / [soothes your just right],<br>And with a heart so pure and gentle,<br>I could never ever have met a lovelier girl...<br><br>***<br><br>Let's celebrate all that we have...<br>All the times we turned our shy faces away;<br>All the times our hearts skiipped a beat,<br>When our roads would accidentally cross;<br>All the times we were brave enough to hug;<br>All the times we shared our music tastes;<br>All the times it was just me and you,<br>When time would stop and you'd be all that matters.<br><br>It was already so perfect,<br>Looking, looking back even perfecter,<br>And now it's become the perfectest...<br>Let me tell you about this girl...<br><br>(x2)<br>With a smile that [warms] / [melts] the heart,<br>And with a voice that [takes your breath away] / [makes your day],<br>With a touch that [makes your blood rush] / [soothes your just right],<br>And with a heart so pure and gentle,<br>I could never ever have met a lovelier girl...";
 const goForwardLyrics = "It has always bothered you hasn't it,<br>You fall and you think it's over,<br>You fall and you feel you cannot get up.<br><br>Perhaps what you've failed to realize,<br>Is that when you fall, you choose the direction,<br>You can choose to win, choose to fall forward.<br><br>***<br><br>It has always bothered you hasn't it,<br>You feel a minor fail like a fatal blow,<br>You burry yourself underneath the failure spotlight.<br><br>Perhaps what you've failed to realize,<br>Is that you are in the spotlight,<br>And you can own the situation, by choosing to go forward...<br><br>***<br><br>Recognize your mistake, as a call to grow<br>Don't let it go to waste, make it count,<br>Stand up straight with your shoulders back, and<br>Don't have a single care about anyone else's opinion.<br><br>Find a way to learn from it, without a word to prove your worth,<br>Find a way to not repeat it, and forget it ever happened.<br>This is how you own it, own it, own it,<br>This is how you go forward.<br><br>Recognize your mistake, as a call to grow<br>Don't let it go to waste, make it count,<br>Stand up straight with your shoulders back, and<br>Don't have a single care about anyone else's opinion.<br><br>Find a way to learn from it, without a word to prove your worth,<br>Find a way to not repeat it, and forget it ever happened.<br><br>***";
@@ -94,16 +95,18 @@ const toxicityLyrics = "***<br><br>Hey, look at yourself,<br>Hey, throw out the 
 const heartsTraceLyrics = "I don't remember when it started,<br>But I know very well<br>How my heart struck<br>I don't sleep all night.<br><br>Chorus (x2):<br>And you, what did you do?<br>You destroyed all my joys.<br>Your gaze was fake,<br>Left traces in my heart.<br><br>You're killing me again and again,<br>You're hitting all my tears.<br><br>Chorus (x2):<br>And you, what did you do?<br>You destroyed all my joys.<br>Your gaze was fake,<br>Left traces in my heart.";
 
 const allSongs = [
+    {id: "song83", name: "What A Wonderful World 🌳🌤🌈song83", infocode: "1112z", mins: 2, secs: 23, src: "./audio/bcsp-WhatAWonderfulWorld.mp3", nameLen: 29, lyrics: NO_LYRICS},
+    {id: "song82", name: "Voila 🕺✨song82", infocode: "1112z", mins: 2, secs: 42, src: "./audio/bcsp-Voila.mp3", nameLen: 9, lyrics: NO_LYRICS},
+    {id: "song81", name: "Whoever Told You 🌏💕80", infocode: "0110z", mins: 2, secs: 7, src: "./audio/sosp-WhoeverToldYou.m4a", nameLen: 21, lyrics: NO_LYRICS},
     {id: "song80", name: "Hey Darling 🍪💌song80", infocode: "0110z", mins: 3, secs: 0, src: "./audio/sosp-HeyDarling.m4a", nameLen: 16, lyrics: NO_LYRICS},
     {id: "song79", name: "The Stars & You 🌟✨song79", infocode: "0110z", mins: 3, secs: 0, src: "./audio/sosp-TheStarsAndYou.m4a", nameLen: 19, lyrics: NO_LYRICS},
     {id: "song78", name: "I Want To Spend A Lifetime Loving You 👵👴song78", infocode: "1112z", mins: 4, secs: 14, src: "./audio/bcsp-IWantToSpendMyLifetimeLovingYou.m4a", nameLen: 42, lyrics: NO_LYRICS},
-    {id: "song76", name: "Social Media 📱song75", infocode: "0100c", mins: 1, secs: 37, src: "./audio/sosg-SocialMedia.m4a", nameLen: 15, lyrics: socialMediaLyrics},
     {id: "song77", name: "The Secrets Of The World 🔐song77", infocode: "0010c", mins: 1, secs: 53, src: "./audio/soip-TheSecretsOfTheWorld.m4a", nameLen: 27, lyrics: NO_LYRICS},
+    {id: "song71", name: "Promised Photoshoot 📸song71", infocode: "0100c", mins: 2, secs: 24, src: "./audio/sosg-PromisedPhotoshoot.m4a", nameLen: 22, lyrics: promisedPhotoshootLyrics},
     {id: "song75", name: "Brilliant Minds 🧠song74", infocode: "0110z", mins: 1, secs: 28, src: "./audio/sosp-BrilliantMinds.m4a", nameLen: 18, lyrics: brilliantMindsLyrics},
     {id: "song74", name: "Earth 🌐 [Sleeping At Last]song74", infocode: "1122z", mins: 3, secs: 50, src: "./audio/bcsb-Earth.m4a", nameLen: 27, lyrics: NO_LYRICS},
     {id: "song73", name: "Golden Leaves 🍁 [Passenger]song73", infocode: "1122z", mins: 3, secs: 40, src: "./audio/bcsb-GoldenLeaves.m4a", nameLen: 28, lyrics: NO_LYRICS},
     {id: "song72", name: "Toxicity 🧪song72", infocode: "0111z", mins: 2, secs: 38, src: "./audio/eosp-Toxicity.m4a", nameLen: 11, lyrics: toxicityLyrics},
-    {id: "song71", name: "Promised Photoshoot 📸song71", infocode: "0100c", mins: 2, secs: 24, src: "./audio/sosg-PromisedPhotoshoot.m4a", nameLen: 22, lyrics: promisedPhotoshootLyrics},
     {id: "song70", name: "Life Instructions 📃song70", infocode: "0100b", mins: 3, secs: 14, src: "./audio/sosg-LifeInstructions.m4a", nameLen: 20, lyrics: LifeInstructionsLyrics},
     {id: "song69", name: "The Magician 🔮🎩song69", infocode: "0110c", mins: 3, secs: 41, src: "./audio/sosp-TheMagician.m4a", nameLen: 17, lyrics: theMagicianLyrics},
     {id: "song68", name: "Heart's Trace 💘song68", infocode: "0111z", mins: 2, secs: 46, src: "./audio/eosp-HeartsTrace.m4a", nameLen: 16, lyrics: heartsTraceLyrics},
